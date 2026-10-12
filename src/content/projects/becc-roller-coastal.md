@@ -1,0 +1,22 @@
+---
+title: "Roller Coastal — Northwest Coast Resilience"
+award: "Finalists (Top 6)"
+issuer: "Built Environment Case Competition 2024 · NUS with PUB & Arup"
+date: "2024-07"
+category: coastal
+featured: true
+summary: "A layered coastal defence for Singapore's northwest coast, backed by life-cycle assessment."
+cover: ../../assets/scenes/redang-beach.jpg
+media:
+  - type: slides
+    title: "BECC 2024 final round slides"
+    src: /media/becc-roller-coastal/final-round.pdf
+  - type: pdf
+    title: "Preliminary round proposal"
+    src: /media/becc-roller-coastal/preliminary-proposal.pdf
+  - type: pdf
+    title: "Top 6 certificate"
+    src: /media/becc-roller-coastal/top-6.pdf
+---
+
+Team Roller Coastal combined solar floating breakwaters, TetraPOT mangroves, Xbloc revetments, tyre-net breakwaters, detention tanks and ecological jetties into one resilience plan for Singapore's northwest coast, backed by life-cycle assessment.

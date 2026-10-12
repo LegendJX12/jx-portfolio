@@ -1,0 +1,40 @@
+---
+// Title-over-image card (idea from sjgroup.com "Explore our Worldview").
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+const { project } = Astro.props as { project: CollectionEntry<'projects'> };
+const { title, award, issuer, cover, date } = project.data;
+---
+<a class="card" href={`/projects/${project.id}`}>
+  {cover && <Image src={cover} alt="" widths={[480, 800]} sizes="(max-width: 860px) 85vw, 400px" format="webp" quality={70} class="card-img" />}
+  <div class="card-body">
+    <span class="pill">{award}</span>
+    <h3>{title}</h3>
+    <p class="mono">{issuer} · {date}</p>
+  </div>
+</a>
+
+<style>
+  .card {
+    position: relative; display: block; min-height: 420px; border-radius: 20px; overflow: hidden;
+    background: var(--navy); color: #fff; text-decoration: none;
+    box-shadow: 0 18px 50px rgba(10, 20, 60, 0.35);
+    transition: transform 0.25s ease;
+  }
+  .card:hover, .card:focus-visible { transform: translateY(-4px); color: #fff; }
+  .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .card:hover .card-img { transform: scale(1.05); }
+  .card::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10, 16, 48, 0) 30%, rgba(10, 16, 48, 0.92) 100%);
+  }
+  .card-body { position: absolute; inset: auto 0 0 0; z-index: 1; padding: 24px; }
+  .pill {
+    display: inline-block; background: var(--yellow); color: var(--navy);
+    font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  }
+  h3 { margin: 12px 0 8px; font-size: 24px; line-height: 1.15; font-weight: 800; letter-spacing: -0.01em; }
+  p { margin: 0; font-size: 12px; opacity: 0.85; }
+  @media (prefers-reduced-motion: reduce) { .card, .card-img { transition: none; } }
+</style>
