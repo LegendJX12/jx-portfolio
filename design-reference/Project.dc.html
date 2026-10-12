@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SEASIDERS — Project detail</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F3EA}
+a{color:#14205C}a:hover{color:#C8102E}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;font-size:14px;font-weight:600;padding:12px 14px;border-radius:8px;color:#14205C}
+.navlinks a:hover{background:rgba(20,32,92,0.08)}
+.two{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:56px}
+.kpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:860px){
+.two{grid-template-columns:minmax(0,1fr);gap:32px}
+.kpi{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wrap{padding:0 16px}
+.navlinks{gap:16px}
+}
+</style>
+</helmet>
+<div style="font-family: 'Archivo', system-ui, sans-serif; color: #13161B; background: #F7F3EA; min-height: 100vh">
+
+<section style="position: relative; overflow: hidden; padding: 24px 0 64px">
+<svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%" aria-hidden="true">
+<defs>
+<linearGradient id="pSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FB0E8"/><stop offset="1" stop-color="#CDEFFA"/></linearGradient>
+<linearGradient id="pSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#19B6C9"/><stop offset="0.5" stop-color="#0E8EAE"/><stop offset="1" stop-color="#0A5F86"/></linearGradient>
+</defs>
+<rect width="1440" height="640" fill="url(#pSky)"/>
+<g fill="#FFFFFF" opacity="0.9"><ellipse cx="1100" cy="80" rx="140" ry="22"/><ellipse cx="1180" cy="66" rx="80" ry="20"/><ellipse cx="260" cy="110" rx="100" ry="18"/></g>
+<path d="M860 230 C920 150 1010 140 1070 190 C1110 160 1190 170 1240 230 Z" fill="#2E7A4E"/>
+<path d="M1220 230 C1250 200 1300 200 1330 230 Z" fill="#3A8A5A"/>
+<rect y="226" width="1440" height="414" fill="url(#pSea)"/>
+<path d="M0 226 H1440" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
+<g fill="#FFFFFF" opacity="0.18"><path d="M200 226 L260 640 L320 640 L240 226 Z"/><path d="M700 226 L780 640 L860 640 L740 226 Z"/><path d="M1150 226 L1220 640 L1290 640 L1190 226 Z"/></g>
+<g transform="translate(1120 420) rotate(-8) scale(1.6)">
+<ellipse cx="0" cy="0" rx="34" ry="24" fill="#3E7C4A"/>
+<path d="M-18 -10 L0 -16 L18 -10 L22 6 L0 14 L-22 6 Z" fill="#5A9A5E" opacity="0.8"/>
+<ellipse cx="42" cy="0" rx="12" ry="9" fill="#7FB07A"/>
+<path d="M14 -20 C30 -40 44 -36 40 -28 C30 -24 22 -20 18 -16 Z" fill="#7FB07A"/>
+<path d="M14 20 C30 40 44 36 40 28 C30 24 22 20 18 16 Z" fill="#7FB07A"/>
+<path d="M-24 -14 L-40 -22 L-30 -8 Z" fill="#7FB07A"/><path d="M-24 14 L-40 22 L-30 8 Z" fill="#7FB07A"/>
+</g>
+<g fill="#FFD23F"><path d="M900 520 c10 -8 24 -8 32 0 l8 -6 v14 l-8 -6 c-8 8 -22 8 -32 0 Z"/><path d="M960 560 c10 -8 24 -8 32 0 l8 -6 v14 l-8 -6 c-8 8 -22 8 -32 0 Z"/></g>
+<g fill="#F2786A"><path d="M0 640 C20 580 40 570 50 600 C60 560 80 560 90 600 C100 580 120 590 120 640 Z"/><path d="M1300 640 C1320 590 1340 580 1350 610 C1360 570 1380 570 1390 610 C1400 590 1430 600 1440 640 Z"/></g>
+<g fill="#FFFFFF" opacity="0.5"><circle cx="1180" cy="360" r="5"/><circle cx="1190" cy="340" r="3.5"/><circle cx="1184" cy="322" r="2.5"/></g>
+</svg>
+<div style="position: relative; display: flex; flex-direction: column; gap: 64px">
+<div class="wrap">
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 8px 10px 8px 14px; border-radius: 14px; background: rgba(255,255,255,0.74); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 18px 50px rgba(10,20,60,0.22)">
+<a href="Main.dc.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px">
+<span style="display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; background: #14205C; color: #FFCC00; border-radius: 10px; font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 14px">JX</span>
+<span style="font-weight: 700; font-size: 16px; color: #13161B">Jin Xie Chai</span>
+</a>
+<nav class="navlinks" aria-label="Primary">
+<a href="Main.dc.html#about">About</a>
+<a href="Main.dc.html#experience">Experience</a>
+<a href="Portfolio.dc.html" style="color: #C8102E">Achievements</a>
+<a href="Main.dc.html#contact">Contact</a>
+</nav>
+</header>
+</div>
+<div class="wrap">
+<div style="max-width: 820px; display: flex; flex-direction: column; gap: 20px; padding: 36px; border-radius: 18px; background: rgba(255,255,255,0.76); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 18px 50px rgba(10,20,60,0.22)">
+<a href="Portfolio.dc.html" style="align-self: flex-start; font-size: 14px; font-weight: 700; padding: 8px 0">← All achievements</a>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 5px 12px; border-radius: 999px; background: #FFCC00; color: #14205C; font-size: 13px; font-weight: 800">Gold Award</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: #14205C; color: #FFFFFF; font-size: 13px; font-weight: 600">UAiTED 2024</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #14205C; font-size: 13px; font-weight: 600">Water &amp; energy</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #14205C; font-size: 13px; font-weight: 600">Aug 2024</span>
+</div>
+<h1 style="margin: 0; font-size: clamp(36px, 5vw, 64px); line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; color: #14205C">SEASIDERS — Osmotic Power Integrated Desalination</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #2C3138">One system that couples Forward Osmosis, Pressure Retarded Osmosis and Reverse Osmosis to halve the energy cost of desalination — and leave no brine behind.</p>
+</div>
+<div style="margin-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.5)">Pulau Redang, Terengganu · green sea turtle</div>
+</div>
+</div>
+</section>
+<div style="height: 48px"></div>
+
+<!-- MEDIA VIEWER -->
+<section style="padding: 0 0 56px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 0">
+<div role="tablist" aria-label="Project media" style="display: flex; flex-wrap: wrap; border: 1px solid #14205C; border-bottom: none; background: #FFFFFF; border-radius: 14px 14px 0 0; overflow: hidden">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+<button type="button" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+<div style="border: 1px solid #14205C; background: #14205C; color: #F3F1EB; border-radius: 0 0 14px 14px; overflow: hidden">
+<sc-if value="{{isVideo}}" hint-placeholder-val="{{true}}">
+<div style="aspect-ratio: 16 / 9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; background-image: linear-gradient(#22272F 1px, transparent 1px), linear-gradient(90deg, #22272F 1px, transparent 1px); background-size: 40px 40px">
+<button type="button" aria-label="Play video" style="width: 84px; height: 84px; border-radius: 50%; border: none; background: #C2410C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C9CDD3">[VIDEO — embed YouTube / Vimeo / Google Drive link]</div>
+</div>
+</sc-if>
+<sc-if value="{{isSlides}}" hint-placeholder-val="{{false}}">
+<div style="aspect-ratio: 16 / 9; display: flex; flex-direction: column">
+<div style="flex: 1; display: flex; align-items: center; justify-content: center; background: #F3F1EB; color: #13161B; margin: 28px 28px 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px">[SLIDE {{slideNo}} — UAiTED Grand Final 2024 PPT, embedded via Google Slides or PDF export]</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; gap: 12px">
+<button type="button" onClick="{{prevSlide}}" aria-label="Previous slide" style="min-width: 44px; min-height: 44px; background: transparent; border: 1px solid #5A616B; color: #F3F1EB; cursor: pointer; font-size: 18px">‹</button>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Slide {{slideNo}}</div>
+<button type="button" onClick="{{nextSlide}}" aria-label="Next slide" style="min-width: 44px; min-height: 44px; background: transparent; border: 1px solid #5A616B; color: #F3F1EB; cursor: pointer; font-size: 18px">›</button>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{isPdf}}" hint-placeholder-val="{{false}}">
+<div style="aspect-ratio: 16 / 9; display: grid; grid-template-columns: 180px minmax(0,1fr); background: #2A2F37">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 18px; overflow: hidden; border-right: 1px solid #3A414B">
+<div style="height: 120px; background: #F3F1EB; outline: 2px solid #C2410C"></div>
+<div style="height: 120px; background: #C9CDD3"></div>
+<div style="height: 120px; background: #C9CDD3"></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; padding: 24px">
+<div style="height: 100%; aspect-ratio: 1 / 1.414; background: #FFFFFF; color: #13161B; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; box-sizing: border-box; font-family: 'IBM Plex Mono', monospace; font-size: 12px">[PDF — SEAsiders Proposal.pdf, in-page viewer with download]</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{isGallery}}" hint-placeholder-val="{{false}}">
+<div style="aspect-ratio: 16 / 9; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); grid-template-rows: repeat(2, minmax(0,1fr)); gap: 6px; padding: 6px; box-sizing: border-box">
+<div style="grid-column: span 2; grid-row: span 2; background: #3A414B; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9CDD3">[Team on stage]</div>
+<div style="background: #3A414B; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9CDD3">[System diagram]</div>
+<div style="background: #3A414B; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #C9CDD3">[Gold certificate]</div>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<!-- KPIs -->
+<section style="border-top: 1px solid #13161B; border-bottom: 1px solid #13161B; background: #FFFFFF">
+<div class="wrap kpi">
+<div style="padding: 28px 20px; border-right: 1px solid #E4E0D5"><div style="font-size: 38px; font-weight: 800; letter-spacing: -0.03em">1.8 <span style="font-size: 18px; font-weight: 600">kWh/m³</span></div><div style="font-size: 13px; color: #4A4F57; margin-top: 6px">down from 3.5 kWh/m³</div></div>
+<div style="padding: 28px 20px; border-right: 1px solid #E4E0D5"><div style="font-size: 38px; font-weight: 800; letter-spacing: -0.03em">50%</div><div style="font-size: 13px; color: #4A4F57; margin-top: 6px">energy savings</div></div>
+<div style="padding: 28px 20px; border-right: 1px solid #E4E0D5"><div style="font-size: 38px; font-weight: 800; letter-spacing: -0.03em">30%</div><div style="font-size: 13px; color: #4A4F57; margin-top: 6px">lower operating cost</div></div>
+<div style="padding: 28px 20px"><div style="font-size: 38px; font-weight: 800; letter-spacing: -0.03em">0</div><div style="font-size: 13px; color: #4A4F57; margin-top: 6px">brine discharged</div></div>
+</div>
+</section>
+
+<!-- BODY -->
+<section style="padding: 80px 0">
+<div class="wrap two">
+<div style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C2410C; letter-spacing: 0.06em">THE CHALLENGE</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #3A3F47">One in four people worldwide still lack safe drinking water. Conventional desalination is energy-hungry, depends on fossil fuels, and discharges brine that damages marine ecosystems.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C2410C; letter-spacing: 0.06em">THE SYSTEM</div>
+<ol style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 12px; font-size: 17px; line-height: 1.6; color: #3A3F47">
+<li>Couples Forward Osmosis (FO), Pressure Retarded Osmosis (PRO) and Reverse Osmosis (RO) into one unified system.</li>
+<li>Recycles waste brine instead of discharging it.</li>
+<li>Extends membrane lifespan for higher efficiency and lower operating cost.</li>
+<li>Recovers more than 50% of energy, making plants more self-sufficient and resilient.</li>
+</ol>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C2410C; letter-spacing: 0.06em">MY ROLE</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #3A3F47">[Describe your part — e.g. system concept, energy calculations, pitch.]</p>
+</div>
+</div>
+<aside style="display: flex; flex-direction: column; gap: 24px">
+<div style="padding: 24px; background: #FFFFFF; border: 1px solid #D9D5CA; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57; letter-spacing: 0.06em">TEAM</div>
+<div style="font-size: 15px; line-height: 1.7">Jin Xie Chai<br>Lam Nguyen Ngan Ha<br>Natalie Tanjaya<br>Si Poh Yi</div>
+</div>
+<div style="padding: 24px; background: #FFFFFF; border: 1px solid #D9D5CA; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57; letter-spacing: 0.06em">UN SDGs</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 6px 10px; background: #2B4C7E; color: #FFFFFF; font-size: 13px; font-weight: 600">SDG 6 Clean water</span>
+<span style="padding: 6px 10px; background: #8A5A00; color: #FFFFFF; font-size: 13px; font-weight: 600">SDG 7 Clean energy</span>
+<span style="padding: 6px 10px; background: #2F5D3A; color: #FFFFFF; font-size: 13px; font-weight: 600">SDG 13 Climate</span>
+</div>
+</div>
+<div style="padding: 24px; background: #FFFFFF; border: 1px solid #D9D5CA; display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57; letter-spacing: 0.06em; margin-bottom: 8px">DOWNLOADS</div>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; border-bottom: 1px solid #E4E0D5; text-decoration: none; font-size: 14px; font-weight: 600"><span>Grand Final slides</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C2410C">PPTX ↓</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; border-bottom: 1px solid #E4E0D5; text-decoration: none; font-size: 14px; font-weight: 600"><span>Preliminary proposal</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C2410C">PDF ↓</span></a>
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; text-decoration: none; font-size: 14px; font-weight: 600"><span>Gold Award certificate</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C2410C">PDF ↓</span></a>
+</div>
+</aside>
+</div>
+</section>
+
+<!-- NEXT -->
+<section style="border-top: 1px solid #13161B">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-top: 40px; padding-bottom: 56px">
+<a href="Portfolio.dc.html" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; padding: 8px 0"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">← PREVIOUS</span><span style="font-size: 20px; font-weight: 700">Start-Up Showcase 2025 — Lyson Technology</span></a>
+<a href="Portfolio.dc.html" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; text-align: right; padding: 8px 0"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">NEXT →</span><span style="font-size: 20px; font-weight: 700">BECC 2024 — Roller Coastal</span></a>
+</div>
+</section>
+
+<footer style="background: #A10D24; color: #FFFFFF; padding: 40px 0">
+<div class="wrap" style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 12px">
+<span>© 2026 Jin Xie Chai</span>
+<a href="Main.dc.html" style="color: #F3F1EB; padding: 6px 0">← Back to home</a>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { tab: 'video', slide: 1 }; }
+  renderVals() {
+    const cur = this.state.tab;
+    const base = 'min-height: 52px; padding: 0 22px; border: none; border-right: 1px solid #D9D5CA; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; ';
+    const tabs = [
+      { id: 'video', label: 'Video' },
+      { id: 'slides', label: 'Slides' },
+      { id: 'pdf', label: 'Proposal PDF' },
+      { id: 'gallery', label: 'Gallery' }
+    ].map(t => ({ label: t.label, sel: t.id === cur ? 'true' : 'false',
+      style: base + (t.id === cur ? 'background: #14205C; color: #FFFFFF' : 'background: #FFFFFF; color: #14205C'),
+      pick: () => this.setState({ tab: t.id }) }));
+    const s = this.state.slide;
+    return {
+      tabs,
+      isVideo: cur === 'video', isSlides: cur === 'slides', isPdf: cur === 'pdf', isGallery: cur === 'gallery',
+      slideNo: s,
+      prevSlide: () => this.setState({ slide: s > 1 ? s - 1 : 1 }),
+      nextSlide: () => this.setState({ slide: s + 1 })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jin Xie Chai — Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F3EA}
+a{color:#14205C}a:hover{color:#C8102E}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:32px;align-items:start}
+.taskbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.exp{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px}
+.navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;font-size:14px;font-weight:600;padding:12px 14px;border-radius:8px;color:#14205C}
+.navlinks a:hover{background:rgba(20,32,92,0.08)}
+.scene{position:relative;overflow:hidden}
+.scene>svg{position:absolute;inset:0;width:100%;height:100%}
+.glass{background:rgba(255,255,255,0.74);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,0.7);box-shadow:0 18px 50px rgba(10,20,60,0.22)}
+@media (max-width:860px){
+.g2,.g3,.hero,.exp{grid-template-columns:minmax(0,1fr)}
+.taskbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wrap{padding:0 16px}
+}
+</style>
+</helmet>
+<div style="font-family: 'Archivo', system-ui, sans-serif; color: #13161B; background: #F7F3EA; min-height: 100vh">
+
+<!-- ============ HERO: MT KINABALU AT DAWN ============ -->
+<section class="scene" style="min-height: 860px; padding: 24px 0 40px; box-sizing: border-box">
+<svg viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs>
+<linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F4B95"/><stop offset="0.42" stop-color="#5E93D1"/><stop offset="0.7" stop-color="#F4B98A"/><stop offset="1" stop-color="#FCE2B6"/></linearGradient>
+<radialGradient id="hSun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFF7D9"/><stop offset="0.35" stop-color="#FFE2A3" stop-opacity="0.8"/><stop offset="1" stop-color="#FFD08A" stop-opacity="0"/></radialGradient>
+<linearGradient id="hPeak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C84A6"/><stop offset="1" stop-color="#465072"/></linearGradient>
+<linearGradient id="hHill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5C9A74"/><stop offset="1" stop-color="#2F6A4C"/></linearGradient>
+<linearGradient id="hHill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D7E57"/><stop offset="1" stop-color="#21513A"/></linearGradient>
+</defs>
+<rect width="1440" height="860" fill="url(#hSky)"/>
+<circle cx="1060" cy="520" r="260" fill="url(#hSun)"/>
+<circle cx="1060" cy="520" r="46" fill="#FFF4D2"/>
+<g fill="#FFFFFF" opacity="0.85">
+<ellipse cx="220" cy="180" rx="120" ry="26"/><ellipse cx="300" cy="166" rx="80" ry="24"/><ellipse cx="160" cy="170" rx="60" ry="18"/>
+<ellipse cx="1180" cy="140" rx="140" ry="24"/><ellipse cx="1260" cy="126" rx="80" ry="22"/>
+<ellipse cx="760" cy="250" rx="90" ry="14" opacity="0.7"/>
+</g>
+<path d="M330 600 L450 500 L505 455 L545 400 L575 420 L602 345 L628 378 L654 300 L680 352 L708 318 L734 362 L762 332 L790 386 L830 406 L900 460 L1010 530 L1130 600 Z" fill="url(#hPeak)"/>
+<path d="M654 300 L680 352 L708 318 L734 362 L762 332 L790 386 L830 406 L900 460 L1010 530 L1130 600 L760 600 L700 420 Z" fill="#F1A982" opacity="0.38"/>
+<path d="M602 345 L628 378 L612 430 L580 470 Z" fill="#2F3858" opacity="0.35"/>
+<ellipse cx="720" cy="590" rx="520" ry="40" fill="#FFFFFF" opacity="0.38"/>
+<path d="M0 640 C200 570 380 610 560 590 S900 550 1100 600 S1350 570 1440 590 V860 H0 Z" fill="url(#hHill1)"/>
+<path d="M0 700 C240 650 420 690 640 670 S1000 640 1200 680 S1380 660 1440 670 V860 H0 Z" fill="url(#hHill2)"/>
+<g fill="#173D2B">
+<circle cx="20" cy="790" r="70"/><circle cx="120" cy="770" r="60"/><circle cx="210" cy="795" r="66"/><circle cx="300" cy="780" r="58"/><circle cx="390" cy="800" r="64"/><circle cx="480" cy="785" r="56"/><circle cx="560" cy="805" r="62"/><circle cx="650" cy="790" r="60"/><circle cx="740" cy="808" r="64"/><circle cx="830" cy="792" r="58"/><circle cx="920" cy="806" r="62"/><circle cx="1010" cy="790" r="60"/><circle cx="1100" cy="804" r="64"/><circle cx="1190" cy="782" r="62"/><circle cx="1280" cy="770" r="72"/><circle cx="1380" cy="760" r="80"/>
+</g>
+<rect y="820" width="1440" height="40" fill="#123323"/>
+<!-- rhinoceros hornbill -->
+<g transform="translate(250 290) scale(1.1)">
+<path d="M0 20 C30 -10 70 -14 96 6 C70 4 40 14 20 34 Z" fill="#1B1E24"/>
+<path d="M30 22 C50 30 70 30 90 22 L80 34 C60 40 40 38 26 30 Z" fill="#1B1E24"/>
+<path d="M60 26 C70 0 40 -30 10 -10 C40 -20 52 0 46 22 Z" fill="#1B1E24"/>
+<ellipse cx="96" cy="16" rx="12" ry="9" fill="#1B1E24"/>
+<path d="M104 12 C120 10 138 18 146 30 C130 26 118 24 104 22 Z" fill="#F5C04A"/>
+<path d="M100 6 C112 -2 130 2 136 12 C124 10 112 10 102 12 Z" fill="#E2552B"/>
+<path d="M30 30 L10 46 L22 46 Z" fill="#F4F1E8"/>
+</g>
+<!-- orangutan on a tree -->
+<path d="M1336 860 C1330 700 1344 560 1320 420" stroke="#3A2A1C" stroke-width="22" fill="none"/>
+<path d="M1322 470 C1270 460 1230 470 1190 455" stroke="#3A2A1C" stroke-width="10" fill="none" stroke-linecap="round"/>
+<circle cx="1330" cy="400" r="70" fill="#1E5A3A"/><circle cx="1280" cy="420" r="50" fill="#246744"/><circle cx="1390" cy="430" r="60" fill="#1B4F33"/>
+<g>
+<path d="M1222 462 C1218 500 1214 520 1226 548" stroke="#B4561B" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M1252 462 C1262 500 1262 520 1250 548" stroke="#B4561B" stroke-width="12" fill="none" stroke-linecap="round"/>
+<ellipse cx="1238" cy="560" rx="30" ry="38" fill="#C4621F"/>
+<circle cx="1238" cy="512" r="22" fill="#C4621F"/>
+<ellipse cx="1238" cy="518" rx="13" ry="11" fill="#E9A574"/>
+<circle cx="1233" cy="512" r="2.4" fill="#2A1A10"/><circle cx="1243" cy="512" r="2.4" fill="#2A1A10"/>
+<path d="M1232 522 Q1238 526 1244 522" stroke="#2A1A10" stroke-width="1.6" fill="none"/>
+<path d="M1220 590 C1214 610 1220 626 1230 630" stroke="#B4561B" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M1256 590 C1262 610 1256 626 1246 630" stroke="#B4561B" stroke-width="12" fill="none" stroke-linecap="round"/>
+</g>
+</svg>
+
+<div style="position: relative; display: flex; flex-direction: column; gap: 56px">
+<!-- glass nav -->
+<div class="wrap">
+<header class="glass" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 8px 10px 8px 14px; border-radius: 14px">
+<a href="Main.dc.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px">
+<span style="display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; background: #14205C; color: #FFCC00; border-radius: 10px; font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 14px">JX</span>
+<span style="font-weight: 700; font-size: 16px; color: #13161B">Jin Xie Chai</span>
+</a>
+<nav class="navlinks" aria-label="Primary">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="Portfolio.dc.html">Achievements</a>
+<a href="#credentials">Credentials</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+</div>
+
+<div class="wrap hero">
+<!-- profile window -->
+<div class="glass" style="border-radius: 16px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: rgba(255,255,255,0.55); border-bottom: 1px solid rgba(20,32,92,0.1)">
+<span style="font-size: 13px; font-weight: 600; color: #3A3F47">jinxiechai — Profile</span>
+<span aria-hidden="true" style="display: flex; gap: 18px; font-size: 14px; color: #3A3F47"><span>—</span><span>☐</span><span>✕</span></span>
+</div>
+<div style="padding: 40px 40px 44px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 6px 12px; border-radius: 999px; background: #14205C; color: #FFFFFF; font-size: 13px; font-weight: 600">Security &amp; Blast Engineer</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #FFCC00; color: #14205C; font-size: 13px; font-weight: 700">Singapore · Malaysia</span>
+</div>
+<h1 style="margin: 0; font-size: clamp(46px, 6.4vw, 88px); line-height: 0.95; font-weight: 800; letter-spacing: -0.035em; color: #14205C">Jin Xie Chai</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #2C3138; max-width: 600px">Civil engineer designing structures that stand up to blast and threat — with a track record in coastal resilience, water–energy innovation and early-stage start-ups.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a href="Portfolio.dc.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #C8102E; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px">View achievements
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #FFFFFF; border: 1.5px solid #14205C; color: #14205C; text-decoration: none; font-weight: 700; font-size: 15px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Download CV</a>
+<a href="https://www.linkedin.com/in/jin-xie-chai-020112cjx/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; color: #14205C; font-weight: 700; font-size: 15px">LinkedIn ↗</a>
+</div>
+</div>
+</div>
+
+<!-- spec sheet window -->
+<div class="glass" style="border-radius: 16px; overflow: hidden; font-size: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #14205C; color: #FFFFFF">
+<span style="font-size: 13px; font-weight: 600">spec-sheet.txt</span>
+<span aria-hidden="true" style="display: flex; gap: 18px; font-size: 14px"><span>—</span><span>☐</span><span>✕</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 96px minmax(0,1fr); border-bottom: 1px solid rgba(20,32,92,0.1)"><div style="padding: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">ROLE</div><div style="padding: 16px; font-weight: 600">Engineer, Security and Blast — Prostruct Consulting</div></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0,1fr); border-bottom: 1px solid rgba(20,32,92,0.1)"><div style="padding: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">BASED</div><div style="padding: 16px; font-weight: 600">Singapore · from Malaysia</div></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0,1fr); border-bottom: 1px solid rgba(20,32,92,0.1)"><div style="padding: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">DEGREE</div><div style="padding: 16px; font-weight: 600">B.Eng. Civil Engineering, NTU · Exchange at TU Munich</div></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0,1fr)"><div style="padding: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">LICENCE</div><div style="padding: 16px; font-weight: 600">PEB Fundamentals of Engineering (Civil), 2026</div></div>
+</div>
+</div>
+
+<!-- taskbar stats -->
+<div class="wrap">
+<div class="glass taskbar" style="border-radius: 16px; padding: 12px">
+<div style="padding: 14px 18px; border-radius: 10px; background: rgba(255,255,255,0.6)"><div style="font-size: 34px; font-weight: 800; color: #14205C">12</div><div style="font-size: 13px; font-weight: 600; color: #3A3F47">Honours &amp; awards</div></div>
+<div style="padding: 14px 18px; border-radius: 10px; background: rgba(255,255,255,0.6)"><div style="font-size: 34px; font-weight: 800; color: #14205C">15</div><div style="font-size: 13px; font-weight: 600; color: #3A3F47">Licences &amp; certifications</div></div>
+<div style="padding: 14px 18px; border-radius: 10px; background: rgba(255,255,255,0.6)"><div style="font-size: 34px; font-weight: 800; color: #14205C">23</div><div style="font-size: 13px; font-weight: 600; color: #3A3F47">Skills</div></div>
+<div style="padding: 14px 18px; border-radius: 10px; background: rgba(255,255,255,0.6)"><div style="font-size: 34px; font-weight: 800; color: #14205C">5</div><div style="font-size: 13px; font-weight: 600; color: #3A3F47">Languages</div></div>
+</div>
+<div style="margin-top: 14px; text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.5)">Mount Kinabalu, Sabah · sunrise</div>
+</div>
+</div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" style="padding: 88px 0 72px">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C8102E; letter-spacing: 0.06em">01 / ABOUT</div>
+<h2 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; color: #14205C">Structural engineer by training, problem-solver by habit.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #3A3F47">[Write a 3–4 sentence summary here: what you do at Prostruct, the problems you enjoy, and what you're building toward. Your LinkedIn has no About section yet, so write it once and use it in both places.]</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="padding: 9px 14px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(20,32,92,0.08); font-size: 14px; font-weight: 600">Security &amp; blast engineering</span>
+<span style="padding: 9px 14px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(20,32,92,0.08); font-size: 14px; font-weight: 600">Coastal protection</span>
+<span style="padding: 9px 14px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(20,32,92,0.08); font-size: 14px; font-weight: 600">Water &amp; energy</span>
+<span style="padding: 9px 14px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(20,32,92,0.08); font-size: 14px; font-weight: 600">Innovation &amp; start-ups</span>
+<span style="padding: 9px 14px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(20,32,92,0.08); font-size: 14px; font-weight: 600">Project management</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ EXPERIENCE: KLCC AT DUSK ============ -->
+<section id="experience" class="scene" style="padding: 0 0 72px">
+<svg viewBox="0 0 1440 1100" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+<defs>
+<linearGradient id="kSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141B4A"/><stop offset="0.28" stop-color="#3C2F78"/><stop offset="0.5" stop-color="#B05A82"/><stop offset="0.64" stop-color="#F29A63"/><stop offset="0.74" stop-color="#1A1F45"/><stop offset="1" stop-color="#11152F"/></linearGradient>
+<linearGradient id="kTower" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8E98B8"/><stop offset="0.5" stop-color="#E4E8F2"/><stop offset="1" stop-color="#7C86A8"/></linearGradient>
+</defs>
+<rect width="1440" height="1100" fill="url(#kSky)"/>
+<g fill="#FFFFFF"><circle cx="120" cy="60" r="1.6"/><circle cx="300" cy="120" r="1.2"/><circle cx="480" cy="40" r="1.8"/><circle cx="900" cy="80" r="1.4"/><circle cx="1100" cy="40" r="1.6"/><circle cx="1300" cy="110" r="1.2"/><circle cx="1380" cy="50" r="1.8"/><circle cx="60" cy="160" r="1.2"/></g>
+<circle cx="1180" cy="230" r="30" fill="#FFE9C9" opacity="0.9"/>
+<g fill="#1C2148">
+<rect x="0" y="560" width="90" height="240"/><rect x="90" y="600" width="70" height="200"/><rect x="160" y="520" width="80" height="280"/><rect x="240" y="580" width="110" height="220"/><rect x="350" y="540" width="70" height="260"/><rect x="420" y="600" width="120" height="200"/>
+<rect x="880" y="560" width="90" height="240"/><rect x="970" y="520" width="70" height="280"/><rect x="1040" y="590" width="120" height="210"/><rect x="1240" y="550" width="90" height="250"/><rect x="1330" y="600" width="110" height="200"/>
+</g>
+<!-- KL Tower -->
+<rect x="1186" y="330" width="14" height="470" fill="#262C5C"/>
+<ellipse cx="1193" cy="330" rx="34" ry="16" fill="#2E3670"/>
+<rect x="1172" y="312" width="42" height="14" rx="6" fill="#3A4386"/>
+<line x1="1193" y1="312" x2="1193" y2="240" stroke="#3A4386" stroke-width="3"/>
+<!-- Petronas Twin Towers -->
+<g>
+<rect x="612" y="300" width="78" height="500" fill="url(#kTower)"/>
+<rect x="620" y="262" width="62" height="40" fill="url(#kTower)"/>
+<rect x="628" y="232" width="46" height="32" fill="url(#kTower)"/>
+<rect x="636" y="208" width="30" height="26" fill="url(#kTower)"/>
+<rect x="643" y="190" width="16" height="20" fill="url(#kTower)"/>
+<line x1="651" y1="190" x2="651" y2="96" stroke="#D8DDEA" stroke-width="3"/>
+<rect x="760" y="300" width="78" height="500" fill="url(#kTower)"/>
+<rect x="768" y="262" width="62" height="40" fill="url(#kTower)"/>
+<rect x="776" y="232" width="46" height="32" fill="url(#kTower)"/>
+<rect x="784" y="208" width="30" height="26" fill="url(#kTower)"/>
+<rect x="791" y="190" width="16" height="20" fill="url(#kTower)"/>
+<line x1="799" y1="190" x2="799" y2="96" stroke="#D8DDEA" stroke-width="3"/>
+<rect x="690" y="440" width="70" height="10" fill="#C9D0E2"/>
+<path d="M700 450 L725 490 L750 450" stroke="#C9D0E2" stroke-width="4" fill="none"/>
+<g stroke="#FFE7A8" stroke-width="1.4" opacity="0.7">
+<line x1="626" y1="320" x2="626" y2="790"/><line x1="651" y1="320" x2="651" y2="790"/><line x1="676" y1="320" x2="676" y2="790"/>
+<line x1="774" y1="320" x2="774" y2="790"/><line x1="799" y1="320" x2="799" y2="790"/><line x1="824" y1="320" x2="824" y2="790"/>
+</g>
+</g>
+<g fill="#FFD27A" opacity="0.85">
+<rect x="20" y="600" width="8" height="10"/><rect x="50" y="640" width="8" height="10"/><rect x="180" y="560" width="8" height="10"/><rect x="210" y="620" width="8" height="10"/><rect x="270" y="610" width="8" height="10"/><rect x="380" y="580" width="8" height="10"/><rect x="460" y="640" width="8" height="10"/><rect x="900" y="600" width="8" height="10"/><rect x="1000" y="560" width="8" height="10"/><rect x="1080" y="630" width="8" height="10"/><rect x="1270" y="590" width="8" height="10"/><rect x="1370" y="640" width="8" height="10"/>
+</g>
+</svg>
+<div style="position: relative">
+<div class="wrap" style="padding-top: 120px; padding-bottom: 260px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #FFCC00; letter-spacing: 0.06em">02 / EXPERIENCE</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">Where I've worked</h2>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E4E0F2">Kuala Lumpur skyline · KLCC at dusk</div>
+</div>
+<div class="wrap">
+<div class="glass" style="border-radius: 16px; padding: 8px 32px">
+
+<article class="exp" style="padding: 30px 0; border-bottom: 1px solid rgba(20,32,92,0.12)">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3A3F47; line-height: 1.6">Aug 2025 — Present<br>1 yr 3 mos</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap"><h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #14205C">Engineer, Security and Blast</h3><span style="padding: 3px 10px; border-radius: 999px; background: #C8102E; color: #FFFFFF; font-size: 12px; font-weight: 700">Current</span></div>
+<div style="font-size: 16px; font-weight: 600">Prostruct Consulting Pte Ltd · Full-time</div>
+<div style="font-size: 14px; color: #4A4F57">Singapore · On-site</div>
+<p style="margin: 6px 0 0; font-size: 16px; line-height: 1.65; color: #3A3F47">[Add 2–3 role highlights — e.g. types of projects, analyses performed, codes and software used.]</p>
+</div>
+</article>
+
+<article class="exp" style="padding: 30px 0; border-bottom: 1px solid rgba(20,32,92,0.12)">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3A3F47; line-height: 1.6">Mar 2024 — Aug 2024<br>6 mos</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #14205C">Intern</h3>
+<div style="font-size: 16px; font-weight: 600">Teambuild Construction Group · Internship</div>
+<div style="font-size: 14px; color: #4A4F57">Singapore · On-site</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px">
+<span style="padding: 5px 12px; border-radius: 999px; background: rgba(20,32,92,0.08); font-size: 13px; font-weight: 600">Microsoft Excel</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: rgba(20,32,92,0.08); font-size: 13px; font-weight: 600">Project Management</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: rgba(20,32,92,0.08); font-size: 13px; font-weight: 600">Construction Management</span>
+<span style="padding: 5px 12px; border-radius: 999px; background: rgba(20,32,92,0.08); font-size: 13px; font-weight: 600">Construction Site Inspections</span>
+</div>
+</div>
+</article>
+
+<article class="exp" style="padding: 30px 0">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3A3F47; line-height: 1.6">Apr 2021 — Jun 2021<br>3 mos</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #14205C">Project Management Intern</h3>
+<div style="font-size: 16px; font-weight: 600">Hup Teik Hing Construction Sdn Bhd · Internship</div>
+<div style="font-size: 14px; color: #4A4F57">Subang Jaya, Selangor, Malaysia</div>
+</div>
+</article>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ ACHIEVEMENTS: PULAU REDANG ============ -->
+<section class="scene" style="padding: 0 0 80px">
+<svg viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+<defs>
+<linearGradient id="rSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5CB8EC"/><stop offset="1" stop-color="#D9F2FB"/></linearGradient>
+<linearGradient id="rSea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E86A8"/><stop offset="0.5" stop-color="#16B5C6"/><stop offset="1" stop-color="#6FE3D6"/></linearGradient>
+</defs>
+<rect width="1440" height="1000" fill="#F7F3EA"/>
+<rect width="1440" height="300" fill="url(#rSky)"/>
+<g fill="#FFFFFF" opacity="0.9"><ellipse cx="300" cy="90" rx="110" ry="22"/><ellipse cx="370" cy="78" rx="70" ry="20"/><ellipse cx="1050" cy="120" rx="130" ry="22"/></g>
+<path d="M880 300 C930 230 1010 220 1060 260 C1100 230 1170 240 1210 300 Z" fill="#2E7A4E"/>
+<path d="M120 300 C170 260 230 255 280 300 Z" fill="#3A8A5A"/>
+<rect y="296" width="1440" height="240" fill="url(#rSea)"/>
+<g stroke="#FFFFFF" stroke-width="2" opacity="0.5" fill="none"><path d="M100 360 q20 -6 40 0"/><path d="M500 400 q20 -6 40 0"/><path d="M820 350 q20 -6 40 0"/><path d="M1200 420 q20 -6 40 0"/><path d="M300 470 q20 -6 40 0"/></g>
+<!-- sea turtle -->
+<g transform="translate(560 430) rotate(-12)">
+<ellipse cx="0" cy="0" rx="34" ry="24" fill="#3E7C4A"/>
+<path d="M-18 -10 L0 -16 L18 -10 L22 6 L0 14 L-22 6 Z" fill="#5A9A5E" opacity="0.8"/>
+<ellipse cx="42" cy="0" rx="12" ry="9" fill="#7FB07A"/>
+<path d="M14 -20 C30 -40 44 -36 40 -28 C30 -24 22 -20 18 -16 Z" fill="#7FB07A"/>
+<path d="M14 20 C30 40 44 36 40 28 C30 24 22 20 18 16 Z" fill="#7FB07A"/>
+<path d="M-24 -14 L-40 -22 L-30 -8 Z" fill="#7FB07A"/><path d="M-24 14 L-40 22 L-30 8 Z" fill="#7FB07A"/>
+</g>
+<path d="M0 520 C300 490 600 540 900 515 S1300 500 1440 520 V1000 H0 Z" fill="#F4E3B5"/>
+<path d="M0 520 C300 490 600 540 900 515 S1300 500 1440 520" stroke="#FFFFFF" stroke-width="6" fill="none" opacity="0.7"/>
+<!-- palms -->
+<g>
+<path d="M90 560 C100 470 130 400 170 350" stroke="#7A5A34" stroke-width="12" fill="none" stroke-linecap="round"/>
+<g fill="#2F7D4A"><path d="M170 350 C120 330 80 340 50 370 C100 350 140 352 170 356 Z"/><path d="M170 350 C200 310 250 300 290 320 C250 322 210 335 172 356 Z"/><path d="M170 350 C150 300 160 270 190 250 C180 290 180 320 174 352 Z"/><path d="M170 350 C220 360 250 390 260 430 C230 400 200 380 170 360 Z"/><path d="M170 350 C130 370 110 400 110 440 C130 405 150 380 168 360 Z"/></g>
+</g>
+<g transform="translate(1250 0) scale(-1 1)">
+<path d="M-60 560 C-50 480 -20 420 10 380" stroke="#7A5A34" stroke-width="11" fill="none" stroke-linecap="round"/>
+<g fill="#2F7D4A"><path d="M10 380 C-40 360 -80 370 -110 400 C-60 380 -20 382 10 386 Z"/><path d="M10 380 C40 340 90 330 130 350 C90 352 50 365 12 386 Z"/><path d="M10 380 C-10 330 0 300 30 280 C20 320 20 350 14 382 Z"/><path d="M10 380 C60 390 90 420 100 460 C70 430 40 410 10 390 Z"/></g>
+</g>
+</svg>
+<div style="position: relative">
+<div class="wrap" style="padding-top: 90px; padding-bottom: 300px; display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #FFFFFF; letter-spacing: 0.06em; text-shadow: 0 1px 6px rgba(0,40,80,0.5)">03 / SELECTED ACHIEVEMENTS</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF; text-shadow: 0 2px 12px rgba(0,40,80,0.45)">Competitions, built for real problems</h2>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FFFFFF; text-shadow: 0 1px 6px rgba(0,40,80,0.5)">Pulau Redang, Terengganu</div>
+</div>
+<a href="Portfolio.dc.html" class="glass" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 10px; color: #14205C; text-decoration: none; font-weight: 700">All 12 achievements
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="wrap g2">
+<a href="Project.dc.html" class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; text-decoration: none; color: #13161B">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 600; color: #3A3F47"><span>UAiTED · Aug 2024</span><span style="padding: 3px 10px; border-radius: 999px; background: #FFCC00; color: #14205C; font-weight: 800">Gold Award</span></div>
+<div style="font-size: 23px; font-weight: 800; line-height: 1.2; color: #14205C">SEASIDERS — Osmotic Power Integrated Desalination</div>
+<div style="font-size: 15px; line-height: 1.6; color: #3A3F47">FO + PRO + RO in one system, cutting desalination energy from 3.5 to 1.8 kWh/m³ with zero brine disposal.</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px"><span style="padding: 4px 8px; border-radius: 6px; background: #C8102E; color: #FFFFFF">PPT</span><span style="padding: 4px 8px; border-radius: 6px; background: #14205C; color: #FFFFFF">PDF</span><span style="padding: 4px 8px; border-radius: 6px; background: #2B6E52; color: #FFFFFF">CERT</span></div>
+</a>
+<a href="Portfolio.dc.html" class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; text-decoration: none; color: #13161B">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 600; color: #3A3F47"><span>UAiTED · Aug 2025</span><span style="padding: 3px 10px; border-radius: 999px; background: #14205C; color: #FFFFFF; font-weight: 700">Start-up Finalist</span></div>
+<div style="font-size: 23px; font-weight: 800; line-height: 1.2; color: #14205C">Lyson Technology — MedTech entry into Southeast Asia</div>
+<div style="font-size: 15px; line-height: 1.6; color: #3A3F47">Led SEA market entry and partnerships for a Taiwanese surgical-training start-up and its bio-mimetic liver model.</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px"><span style="padding: 4px 8px; border-radius: 6px; background: #6B6F76; color: #FFFFFF">START-UP</span><span style="padding: 4px 8px; border-radius: 6px; background: #2B6E52; color: #FFFFFF">CERT</span></div>
+</a>
+<a href="Portfolio.dc.html" class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; text-decoration: none; color: #13161B">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 600; color: #3A3F47"><span>NUS · PUB · Arup · Jul 2024</span><span style="padding: 3px 10px; border-radius: 999px; background: #14205C; color: #FFFFFF; font-weight: 700">Top 6 Finalist</span></div>
+<div style="font-size: 23px; font-weight: 800; line-height: 1.2; color: #14205C">Roller Coastal — Safeguarding Singapore's Northwest Coast</div>
+<div style="font-size: 15px; line-height: 1.6; color: #3A3F47">Solar floating breakwaters, TetraPOT mangroves and Xbloc revetments, assessed with life-cycle metrics.</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px"><span style="padding: 4px 8px; border-radius: 6px; background: #C8102E; color: #FFFFFF">PPT</span><span style="padding: 4px 8px; border-radius: 6px; background: #14205C; color: #FFFFFF">PDF</span><span style="padding: 4px 8px; border-radius: 6px; background: #2B6E52; color: #FFFFFF">CERT</span></div>
+</a>
+<a href="Portfolio.dc.html" class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; text-decoration: none; color: #13161B">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 600; color: #3A3F47"><span>PUB Singapore · Oct 2023</span><span style="padding: 3px 10px; border-radius: 999px; background: #14205C; color: #FFFFFF; font-weight: 700">Top 3 · two typologies</span></div>
+<div style="font-size: 23px; font-weight: 800; line-height: 1.2; color: #14205C">Living with the Rising Seas — South-eastern Coast</div>
+<div style="font-size: 15px; line-height: 1.6; color: #3A3F47">Xbloc coastal structures and urban water buffers; exhibited at Marina Barrage's Sustainable Singapore Gallery.</div>
+<div style="display: flex; gap: 6px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px"><span style="padding: 4px 8px; border-radius: 6px; background: #14205C; color: #FFFFFF">POSTERS</span><span style="padding: 4px 8px; border-radius: 6px; background: #4D6B3C; color: #FFFFFF">PHOTO</span></div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- ============ EDUCATION + CERTS: PENANG / PETALING STREET ============ -->
+<section id="credentials" class="scene" style="padding: 0 0 80px">
+<svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMin slice" style="height: 420px" aria-hidden="true">
+<rect width="1440" height="420" fill="#FBE6C6"/>
+<path d="M0 60 Q 180 140 360 60 T 720 60 T 1080 60 T 1440 60" stroke="#5A2A1A" stroke-width="2" fill="none"/>
+<g>
+<g transform="translate(90 92)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(270 116)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(450 92)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(630 116)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(810 92)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(990 116)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(1170 92)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+<g transform="translate(1350 116)"><rect x="-4" y="-22" width="8" height="6" fill="#E2A51B"/><ellipse cx="0" cy="0" rx="18" ry="20" fill="#D6201F"/><rect x="-4" y="18" width="8" height="5" fill="#E2A51B"/><line x1="0" y1="23" x2="0" y2="38" stroke="#E2A51B" stroke-width="2"/></g>
+</g>
+<!-- shophouses -->
+<g>
+<g transform="translate(0 170)"><rect width="180" height="250" fill="#E9A6A6"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="30" width="34" height="56" fill="#2E6B57"/><rect x="74" y="30" width="34" height="56" fill="#2E6B57"/><rect x="124" y="30" width="34" height="56" fill="#2E6B57"/><rect y="120" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 250 V180 Q55 150 90 180 Q125 150 160 180 V250 Z" fill="#7A3B3B" opacity="0.55"/></g>
+<g transform="translate(180 150)"><rect width="180" height="270" fill="#9FC9B8"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="74" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="124" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect y="130" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 270 V200 Q55 170 90 200 Q125 170 160 200 V270 Z" fill="#2D5A4C" opacity="0.5"/></g>
+<g transform="translate(360 170)"><rect width="180" height="250" fill="#F2D27A"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="30" width="34" height="56" fill="#2E6B57"/><rect x="74" y="30" width="34" height="56" fill="#2E6B57"/><rect x="124" y="30" width="34" height="56" fill="#2E6B57"/><rect y="120" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 250 V180 Q55 150 90 180 Q125 150 160 180 V250 Z" fill="#8A6A1E" opacity="0.5"/></g>
+<g transform="translate(540 150)"><rect width="180" height="270" fill="#A9C1E6"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="74" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="124" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect y="130" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 270 V200 Q55 170 90 200 Q125 170 160 200 V270 Z" fill="#3B4F7A" opacity="0.5"/></g>
+<g transform="translate(720 170)"><rect width="180" height="250" fill="#E7B98F"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="30" width="34" height="56" fill="#2E6B57"/><rect x="74" y="30" width="34" height="56" fill="#2E6B57"/><rect x="124" y="30" width="34" height="56" fill="#2E6B57"/><rect y="120" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 250 V180 Q55 150 90 180 Q125 150 160 180 V250 Z" fill="#7A4A2A" opacity="0.5"/></g>
+<g transform="translate(900 150)"><rect width="180" height="270" fill="#C7B3DE"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="74" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="124" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect y="130" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 270 V200 Q55 170 90 200 Q125 170 160 200 V270 Z" fill="#5A3F7A" opacity="0.45"/></g>
+<g transform="translate(1080 170)"><rect width="180" height="250" fill="#9FC9B8"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="30" width="34" height="56" fill="#2E6B57"/><rect x="74" y="30" width="34" height="56" fill="#2E6B57"/><rect x="124" y="30" width="34" height="56" fill="#2E6B57"/><rect y="120" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 250 V180 Q55 150 90 180 Q125 150 160 180 V250 Z" fill="#2D5A4C" opacity="0.5"/></g>
+<g transform="translate(1260 150)"><rect width="180" height="270" fill="#E9A6A6"/><rect y="-14" width="180" height="16" fill="#B5523B"/><rect x="24" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="74" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect x="124" y="34" width="34" height="60" fill="#FFFFFF" opacity="0.85"/><rect y="130" width="180" height="10" fill="#FFFFFF" opacity="0.6"/><path d="M20 270 V200 Q55 170 90 200 Q125 170 160 200 V270 Z" fill="#7A3B3B" opacity="0.5"/></g>
+</g>
+</svg>
+<div style="position: relative">
+<div class="wrap" style="padding-top: 200px; padding-bottom: 40px">
+<div class="glass" style="display: inline-flex; flex-direction: column; gap: 6px; padding: 18px 24px; border-radius: 14px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C8102E; letter-spacing: 0.06em">04 / EDUCATION &amp; CREDENTIALS</div>
+<h2 style="margin: 0; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; color: #14205C">Learning, on record</h2>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A3F47">George Town shophouses · Petaling Street lanterns</div>
+</div>
+</div>
+<div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<div class="g3">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 16px; box-shadow: 0 10px 30px rgba(20,32,92,0.1); border-top: 5px solid #C8102E">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">JUL 2021 — MAY 2025</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #14205C">Nanyang Technological University Singapore</h3>
+<div style="font-size: 15px">Bachelor of Engineering (BE), Civil Engineering</div>
+<div style="font-size: 14px; color: #4A4F57; line-height: 1.5">Activities: NTU Aquathlon, NTU Chinese Society · Dean's List AY2022/23</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 16px; box-shadow: 0 10px 30px rgba(20,32,92,0.1); border-top: 5px solid #14205C">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">OCT 2023 — MAR 2024</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #14205C">Technical University of Munich</h3>
+<div style="font-size: 15px">Bachelor of Engineering (Exchange Programme), Civil Engineering</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border-radius: 16px; box-shadow: 0 10px 30px rgba(20,32,92,0.1); border-top: 5px solid #E2A51B">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4A4F57">2015 — 2020</div>
+<h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #14205C">Hin Hua High School</h3>
+<div style="font-size: 15px">High School Diploma</div>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; box-shadow: 0 10px 30px rgba(20,32,92,0.1); overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #14205C; color: #FFFFFF">
+<span style="font-size: 14px; font-weight: 700">Licences &amp; certifications (15)</span>
+<span aria-hidden="true" style="display: flex; gap: 18px; font-size: 14px"><span>—</span><span>☐</span><span>✕</span></span>
+</div>
+<div style="padding: 4px 24px 24px">
+<sc-for list="{{certs}}" as="c" hint-placeholder-count="6">
+<div style="display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid #ECE7DC">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 16px; font-weight: 700">{{c.name}}</div>
+<div style="font-size: 14px; color: #4A4F57">{{c.issuer}} · Issued {{c.date}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">{{c.cred}}</span></div>
+</div>
+<a href="#" style="font-size: 14px; font-weight: 700; padding: 12px 0; white-space: nowrap">View ↗</a>
+</div>
+</sc-for>
+<button type="button" onClick="{{toggleCerts}}" style="margin-top: 20px; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #FFFFFF; border: 1.5px solid #14205C; font-family: inherit; font-size: 15px; font-weight: 700; color: #14205C; cursor: pointer">{{certLabel}}</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ SKILLS + LANGUAGES: RAINFOREST WITH TAPIR & TIGER ============ -->
+<section id="skills" class="scene" style="padding: 0 0 80px">
+<svg viewBox="0 0 1440 1300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs>
+<linearGradient id="fBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7F3EA"/><stop offset="0.12" stop-color="#CFE3C9"/><stop offset="0.5" stop-color="#5E9A6E"/><stop offset="1" stop-color="#1F4A33"/></linearGradient>
+<linearGradient id="fRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6D0" stop-opacity="0.55"/><stop offset="1" stop-color="#FFF6D0" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1440" height="1300" fill="url(#fBg)"/>
+<path d="M900 0 L1020 0 L760 1300 L560 1300 Z" fill="url(#fRay)"/>
+<path d="M1150 0 L1220 0 L1040 1300 L920 1300 Z" fill="url(#fRay)" opacity="0.7"/>
+<g fill="#2E6A47" opacity="0.6"><rect x="60" y="200" width="26" height="1100"/><rect x="1330" y="160" width="30" height="1140"/><rect x="420" y="400" width="18" height="900"/></g>
+<g fill="#1F5639"><circle cx="70" cy="200" r="120"/><circle cx="1350" cy="170" r="140"/><circle cx="430" cy="400" r="90"/></g>
+<g fill="#1A4A31">
+<path d="M0 1120 C60 1060 110 1060 160 1120 C210 1050 280 1050 320 1120 C380 1060 440 1070 480 1120 C540 1050 600 1060 640 1120 C700 1060 760 1060 800 1120 C860 1050 930 1060 970 1120 C1030 1060 1090 1060 1130 1120 C1190 1050 1260 1060 1300 1120 C1350 1070 1400 1070 1440 1110 V1300 H0 Z"/>
+</g>
+<g fill="#2C6B45">
+<path d="M80 1170 C60 1120 40 1100 10 1090 C50 1110 70 1130 80 1170 Z"/><path d="M80 1170 C100 1120 130 1100 170 1095 C130 1115 100 1135 80 1170 Z"/>
+<path d="M1260 1170 C1240 1120 1220 1100 1190 1090 C1230 1110 1250 1130 1260 1170 Z"/><path d="M1260 1170 C1280 1120 1310 1100 1350 1095 C1310 1115 1280 1135 1260 1170 Z"/>
+</g>
+<!-- Malayan tapir -->
+<g transform="translate(250 1130)">
+<ellipse cx="0" cy="0" rx="110" ry="54" fill="#1C1C1E"/>
+<ellipse cx="18" cy="-4" rx="58" ry="50" fill="#F2EFE8"/>
+<path d="M-24 -46 C-30 0 -26 40 -14 52 L-42 52 C-52 20 -50 -20 -44 -44 Z" fill="#1C1C1E"/>
+<ellipse cx="-118" cy="-6" rx="40" ry="32" fill="#1C1C1E"/>
+<path d="M-150 -2 C-170 4 -178 20 -172 30 C-164 20 -154 14 -142 12 Z" fill="#1C1C1E"/>
+<ellipse cx="-104" cy="-34" rx="8" ry="12" fill="#1C1C1E"/><ellipse cx="-104" cy="-38" rx="3" ry="6" fill="#F2EFE8"/>
+<circle cx="-126" cy="-12" r="3" fill="#F2EFE8"/>
+<rect x="-90" y="30" width="18" height="44" rx="6" fill="#1C1C1E"/><rect x="-52" y="34" width="18" height="40" rx="6" fill="#1C1C1E"/><rect x="58" y="30" width="18" height="44" rx="6" fill="#1C1C1E"/><rect x="90" y="30" width="18" height="44" rx="6" fill="#1C1C1E"/>
+</g>
+<!-- Malayan tiger -->
+<g transform="translate(1110 1150)">
+<path d="M110 -10 C150 -30 170 -10 160 20" stroke="#E07B1F" stroke-width="12" fill="none" stroke-linecap="round"/>
+<ellipse cx="0" cy="0" rx="120" ry="46" fill="#E07B1F"/>
+<ellipse cx="-10" cy="22" rx="90" ry="20" fill="#F7E1C4"/>
+<g fill="#1C1C1E"><path d="M-60 -44 C-56 -20 -66 0 -60 10 C-50 -10 -48 -30 -50 -44 Z"/><path d="M-20 -46 C-14 -20 -26 4 -18 14 C-8 -10 -6 -30 -8 -46 Z"/><path d="M20 -46 C26 -20 14 4 22 14 C32 -10 34 -30 32 -46 Z"/><path d="M60 -42 C66 -20 56 0 62 10 C72 -10 72 -28 70 -40 Z"/><path d="M96 -28 C100 -10 94 4 98 12 C106 -4 108 -18 106 -26 Z"/></g>
+<rect x="-90" y="30" width="22" height="46" rx="8" fill="#E07B1F"/><rect x="-50" y="34" width="22" height="42" rx="8" fill="#E07B1F"/><rect x="50" y="30" width="22" height="46" rx="8" fill="#E07B1F"/><rect x="86" y="30" width="22" height="46" rx="8" fill="#E07B1F"/>
+<circle cx="-130" cy="-20" r="44" fill="#E07B1F"/>
+<circle cx="-158" cy="-56" r="12" fill="#E07B1F"/><circle cx="-104" cy="-58" r="12" fill="#E07B1F"/><circle cx="-158" cy="-56" r="5" fill="#1C1C1E"/><circle cx="-104" cy="-58" r="5" fill="#1C1C1E"/>
+<ellipse cx="-136" cy="0" rx="26" ry="18" fill="#F7E1C4"/>
+<circle cx="-146" cy="-26" r="4" fill="#1C1C1E"/><circle cx="-118" cy="-28" r="4" fill="#1C1C1E"/>
+<path d="M-138 -8 L-130 -8 L-134 -2 Z" fill="#1C1C1E"/>
+<g stroke="#1C1C1E" stroke-width="4" stroke-linecap="round"><line x1="-162" y1="-12" x2="-150" y2="-16"/><line x1="-104" y1="-14" x2="-94" y2="-22"/><line x1="-132" y1="-60" x2="-130" y2="-46"/></g>
+</g>
+</svg>
+<div style="position: relative">
+<div class="wrap" style="padding-top: 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #C8102E; letter-spacing: 0.06em">05 / SKILLS</div>
+<h2 style="margin: 0; font-size: 40px; font-weight: 800; letter-spacing: -0.02em; color: #14205C">Toolkit</h2>
+</div>
+<div class="g2">
+<sc-for list="{{skillGroups}}" as="g" hint-placeholder-count="5">
+<div class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 16px">
+<div style="font-size: 14px; font-weight: 800; color: #14205C">{{g.title}}</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{g.items}}" as="s" hint-placeholder-count="4">
+<span style="padding: 7px 13px; border-radius: 999px; background: #FFFFFF; font-size: 14px; font-weight: 600; box-shadow: 0 1px 4px rgba(20,32,92,0.08)">{{s}}</span>
+</sc-for>
+</div>
+</div>
+</sc-for>
+<div class="glass" style="display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 16px">
+<div style="font-size: 14px; font-weight: 800; color: #14205C">Languages</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px">
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF"><div style="font-weight: 700">English</div><div style="font-size: 13px; color: #4A4F57">Native or bilingual</div></div>
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF"><div style="font-weight: 700">Chinese</div><div style="font-size: 13px; color: #4A4F57">Native or bilingual</div></div>
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF"><div style="font-weight: 700">Malay</div><div style="font-size: 13px; color: #4A4F57">Professional working</div></div>
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF"><div style="font-weight: 700">German</div><div style="font-size: 13px; color: #4A4F57">Elementary</div></div>
+<div style="padding: 10px 12px; border-radius: 10px; background: #FFFFFF"><div style="font-weight: 700">Spanish</div><div style="font-size: 13px; color: #4A4F57">Elementary</div></div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #FFCC00; letter-spacing: 0.06em">06 / LEADERSHIP</div>
+<h2 style="margin: 0; font-size: 40px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">Beyond the job</h2>
+</div>
+<div class="g2">
+<div class="glass" style="display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A3F47">AUG 2021 — JUN 2024</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #14205C">NTU Chinese Society</h3>
+<div style="font-size: 15px; font-weight: 600">Events Main Committee</div>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.65; color: #2C3138">Planned booths and activities for the NTU Mid-Autumn Festival 2022, drawing over a thousand visitors. Managed preparation and exhibition of 300+ entries at the National Chinese Calligraphy Competition 2022, and prepared the financial reports for the Chinese Cultural Event 2024.</p>
+</div>
+<div class="glass" style="display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A3F47">AUG 2021 — MAY 2023</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #14205C">NTU Aquathlon Team</h3>
+<div style="font-size: 15px; font-weight: 600">Team Manager</div>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.65; color: #2C3138">Managed major events such as NTURO with stakeholders, ran the team's inventory system, and organised tailored training sessions to lift team performance.</p>
+</div>
+</div>
+<div style="height: 260px"></div>
+<div style="text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FFFFFF">Malaysian rainforest · Malayan tapir &amp; Malayan tiger</div>
+</div>
+</div>
+</section>
+
+<!-- ============ CONTACT: LION DANCE ============ -->
+<footer id="contact" class="scene" style="padding: 96px 0 40px; background: #A10D24">
+<svg viewBox="0 0 1440 560" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+<defs>
+<radialGradient id="lGlow" cx="0.78" cy="0.45" r="0.5"><stop offset="0" stop-color="#E23A3A"/><stop offset="1" stop-color="#A10D24"/></radialGradient>
+</defs>
+<rect width="1440" height="560" fill="url(#lGlow)"/>
+<g stroke="#E2A51B" stroke-width="2" fill="none" opacity="0.25">
+<circle cx="120" cy="120" r="60"/><circle cx="120" cy="120" r="40"/><circle cx="360" cy="460" r="60"/><circle cx="360" cy="460" r="40"/><circle cx="640" cy="80" r="50"/>
+</g>
+<!-- lion dance head -->
+<g transform="translate(1130 290)">
+<ellipse cx="0" cy="40" rx="220" ry="60" fill="#8A0B1E" opacity="0.6"/>
+<path d="M-160 20 C-170 -120 -80 -200 0 -200 C80 -200 170 -120 160 20 C150 120 80 160 0 160 C-80 160 -150 120 -160 20 Z" fill="#E2231A"/>
+<path d="M-160 20 C-170 -120 -80 -200 0 -200 C80 -200 170 -120 160 20" stroke="#F5C542" stroke-width="14" fill="none"/>
+<path d="M-176 30 C-190 -60 -170 -140 -120 -186" stroke="#FFFFFF" stroke-width="18" fill="none" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M176 30 C190 -60 170 -140 120 -186" stroke="#FFFFFF" stroke-width="18" fill="none" stroke-linecap="round" stroke-dasharray="2 14"/>
+<path d="M-20 -200 C-10 -240 10 -240 20 -200 Z" fill="#F5C542"/>
+<circle cx="0" cy="-150" r="22" fill="#F5C542"/><circle cx="0" cy="-150" r="10" fill="#E2231A"/>
+<ellipse cx="-62" cy="-70" rx="46" ry="38" fill="#FFFFFF"/><ellipse cx="62" cy="-70" rx="46" ry="38" fill="#FFFFFF"/>
+<circle cx="-56" cy="-66" r="20" fill="#1C1C1E"/><circle cx="56" cy="-66" r="20" fill="#1C1C1E"/>
+<circle cx="-50" cy="-72" r="6" fill="#FFFFFF"/><circle cx="62" cy="-72" r="6" fill="#FFFFFF"/>
+<path d="M-110 -110 C-80 -126 -40 -124 -20 -108" stroke="#1C1C1E" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M110 -110 C80 -126 40 -124 20 -108" stroke="#1C1C1E" stroke-width="10" fill="none" stroke-linecap="round"/>
+<ellipse cx="0" cy="-10" rx="40" ry="28" fill="#F5C542"/>
+<circle cx="-14" cy="-10" r="7" fill="#8A0B1E"/><circle cx="14" cy="-10" r="7" fill="#8A0B1E"/>
+<path d="M-110 40 C-60 110 60 110 110 40 C70 70 -70 70 -110 40 Z" fill="#FFFFFF"/>
+<path d="M-90 50 L-70 70 L-50 54 L-30 74 L-10 56 L10 74 L30 56 L50 74 L70 54 L90 50" stroke="#E2231A" stroke-width="4" fill="none"/>
+<path d="M-120 120 C-80 170 80 170 120 120" stroke="#FFFFFF" stroke-width="16" fill="none" stroke-linecap="round" stroke-dasharray="2 12"/>
+<g fill="#F5C542"><circle cx="-130" cy="-20" r="10"/><circle cx="130" cy="-20" r="10"/><circle cx="-120" cy="60" r="8"/><circle cx="120" cy="60" r="8"/></g>
+</g>
+</svg>
+<div style="position: relative">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div class="glass" style="border-radius: 18px; overflow: hidden; max-width: 680px">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255,255,255,0.55); border-bottom: 1px solid rgba(20,32,92,0.1)">
+<span style="font-size: 13px; font-weight: 600; color: #3A3F47">new-message</span>
+<span aria-hidden="true" style="display: flex; gap: 18px; font-size: 14px; color: #3A3F47"><span>—</span><span>☐</span><span>✕</span></span>
+</div>
+<div style="padding: 36px; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-size: clamp(32px, 4.4vw, 54px); line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; color: #14205C">Let's build something that holds up.</h2>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a href="mailto:[your-email]" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #C8102E; color: #FFFFFF; text-decoration: none; font-weight: 700">[Your email]</a>
+<a href="https://www.linkedin.com/in/jin-xie-chai-020112cjx/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #FFFFFF; border: 1.5px solid #14205C; color: #14205C; text-decoration: none; font-weight: 700">LinkedIn</a>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 10px; background: #FFFFFF; border: 1.5px solid #14205C; color: #14205C; text-decoration: none; font-weight: 700">GitHub</a>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.35); font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FFFFFF"><span>© 2026 Jin Xie Chai</span><span>Lion dance · Malaysia</span></div>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { allCerts: false }; }
+  renderVals() {
+    const certs = [
+      { name: 'Fundamentals of Engineering Examination (Civil Engineering)', issuer: 'Professional Engineers Board Singapore', date: 'Apr 2026', cred: '' },
+      { name: 'Project Management Badge (PMI Kickoff Predictive & Agile)', issuer: 'Project Management Institute', date: 'Apr 2026', cred: '' },
+      { name: 'S110E: Intermediate Building Structures Analysis & Design with 3D FEM (ETABS)', issuer: 'Otte International Pte Ltd', date: 'Mar 2026', cred: '' },
+      { name: 'Specialization in Coastal Protection', issuer: 'Nanyang Technological University Singapore', date: 'Jun 2025', cred: '' },
+      { name: 'Google Project Management: Specialization', issuer: 'Google', date: 'Aug 2024', cred: 'ID LEX8E7J2C0QM' },
+      { name: 'Google Business Intelligence Specialization', issuer: 'Google', date: 'Aug 2024', cred: 'ID VW6AAJSJ1I4M' },
+      { name: 'Google Data Analytics Specialization', issuer: 'Google', date: 'Aug 2024', cred: 'ID ISFE245WQ8NE' },
+      { name: 'Excel Skills for Data Analytics and Visualization Specialization', issuer: 'Macquarie University', date: 'May 2024', cred: 'ID EXURC8KE4XTV' },
+      { name: 'Capstone: Retrieving, Processing, and Visualizing Data with Python (with Honors)', issuer: 'University of Michigan', date: 'Apr 2024', cred: 'ID TG7BWK5VTSNJ' },
+      { name: 'Python for Everybody Specialization', issuer: 'University of Michigan', date: 'Apr 2024', cred: 'ID AHV5AGNBJYPL' },
+      { name: 'Foundational MATLAB', issuer: 'MATLAB Coding', date: 'Nov 2023', cred: '' },
+      { name: 'MATLAB Onramp', issuer: 'MATLAB Coding', date: 'Oct 2023', cred: '' },
+      { name: 'Revit: Structural Families', issuer: 'LinkedIn', date: 'May 2023', cred: '' },
+      { name: 'AutoCAD 2022 Essential Training', issuer: 'LinkedIn', date: 'Mar 2023', cred: '' },
+      { name: 'Learning AutoCAD (2020)', issuer: 'LinkedIn', date: 'Feb 2023', cred: '' }
+    ];
+    const skillGroups = [
+      { title: 'Structural & civil', items: ['Civil Engineering', 'ETABS', 'Soil Mechanics', 'AutoCAD', 'Revit'] },
+      { title: 'Water & coastal', items: ['Coastal Engineering', 'Flood Management', 'Water Resource Engineering', 'Water Resource Management', 'Fluid Mechanics', 'Environmental Hydraulics'] },
+      { title: 'Project & construction', items: ['Project Management', 'Construction Management', 'Construction Site Inspections'] },
+      { title: 'Data & code', items: ['Python', 'MATLAB', 'SQL', 'Data Analysis', 'Data Visualization', 'Microsoft Excel', 'Microsoft Power BI'] },
+      { title: 'Media', items: ['Adobe Photoshop', 'Wondershare Filmora'] }
+    ];
+    const all = this.state.allCerts;
+    return {
+      certs: all ? certs : certs.slice(0, 6),
+      certLabel: all ? 'Show fewer' : 'Show all 15 certifications',
+      toggleCerts: () => this.setState({ allCerts: !all }),
+      skillGroups
+    };
+  }
+}
+</script>
+</body>
+</html>
