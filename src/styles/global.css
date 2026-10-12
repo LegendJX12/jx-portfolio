@@ -1,0 +1,33 @@
+/* Jalur Gemilang palette + type, from docs/brand.md */
+:root {
+  --navy: #14205C;
+  --red: #C8102E;
+  --yellow: #FFCC00;
+  --deep-red: #A10D24;
+  --ground: #F7F3EA;
+  --text: #13161B;
+  --text-2: #3A3F47;
+  --muted: #4A4F57;
+  --glass: rgba(255, 255, 255, 0.74);
+  --font: 'Archivo', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font); color: var(--text); background: var(--ground); }
+a { color: var(--navy); }
+a:hover { color: var(--red); }
+img { max-width: 100%; height: auto; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 860px) { .wrap { padding: 0 16px; } }
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 50px rgba(10, 20, 60, 0.22);
+  border-radius: 16px;
+}
+.mono { font-family: var(--mono); }
