@@ -1,0 +1,125 @@
+---
+import fs from 'node:fs';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Scene from '../../components/Scene.astro';
+import MediaViewer from '../../components/MediaViewer.astro';
+import { getProjects, categories, formatDate } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project, i) => ({
+    params: { id: project.id },
+    props: { project, prev: projects[i - 1], next: projects[i + 1] },
+  }));
+}
+
+const { project, prev, next } = Astro.props;
+const d = project.data;
+const { Content } = await render(project);
+// Only offer downloads for files that are actually in public/media.
+const downloads = d.media.filter((m) => (m.type === 'pdf' || m.type === 'slides') && fs.existsSync(`public${m.src}`));
+---
+<Base title={`${d.title} · JX`} description={d.summary}>
+  <Nav />
+
+  <Scene image={d.cover} eager class="page-hero">
+    <p class="eyebrow"><a href="/projects">Projects</a> / {categories[d.category]}</p>
+    <span class="pill">{d.award}</span>
+    <h1>{d.title}</h1>
+    <p class="lead">{d.summary}</p>
+    <p class="meta mono">{d.issuer} · {formatDate(d.date)}</p>
+  </Scene>
+
+  {d.kpis.length > 0 && (
+    <section class="kpis">
+      <div class="wrap kpi-grid">
+        {d.kpis.map((k) => (
+          <div class="kpi"><strong>{k.value}</strong><span>{k.label}</span></div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="wrap body">
+    <div class="main">
+      <MediaViewer media={d.media} />
+      <div class="story"><Content /></div>
+    </div>
+
+    <aside class="side">
+      <dl>
+        <dt>Award</dt><dd>{d.award}</dd>
+        <dt>Organiser</dt><dd>{d.issuer}</dd>
+        <dt>Date</dt><dd>{formatDate(d.date)}</dd>
+        <dt>Theme</dt><dd>{categories[d.category]}</dd>
+        {d.team.length > 0 && (<><dt>Team</dt><dd><ul>{d.team.map((t) => <li>{t}</li>)}</ul></dd></>)}
+        {d.sdgs.length > 0 && (<><dt>UN SDGs</dt><dd class="sdgs">{d.sdgs.map((n) => <span>SDG {n}</span>)}</dd></>)}
+      </dl>
+      {d.links.length > 0 && (
+        <>
+          <h2>Links</h2>
+          <ul class="links">{d.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label} ↗</a></li>)}</ul>
+        </>
+      )}
+      {downloads.length > 0 && (
+        <>
+          <h2>Downloads</h2>
+          <ul class="links">
+            {downloads.map((m) => (
+              <li><a href={m.src} download><span class:list={['badge', m.type]}>{m.type === 'slides' ? 'PPT' : 'PDF'}</span>{m.title}</a></li>
+            ))}
+          </ul>
+        </>
+      )}
+    </aside>
+  </section>
+
+  <nav class="wrap pager" aria-label="More projects">
+    {prev ? <a href={`/projects/${prev.id}`}><span class="mono">← Newer</span>{prev.data.title}</a> : <span></span>}
+    {next ? <a href={`/projects/${next.id}`} class="right"><span class="mono">Older →</span>{next.data.title}</a> : <span></span>}
+  </nav>
+</Base>
+
+<style>
+  :global(.page-hero) :global(.scene-inner) { padding-top: 140px; }
+  .eyebrow { margin: 0 0 16px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); }
+  .eyebrow a { color: var(--yellow); }
+  .pill { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 999px; }
+  h1 { margin: 16px 0 0; max-width: 22ch; font-size: clamp(34px, 5vw, 60px); line-height: 1.03; font-weight: 800; letter-spacing: -0.03em; text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35); }
+  .lead { max-width: 60ch; margin: 20px 0 0; font-size: 18px; line-height: 1.6; }
+  .meta { margin: 16px 0 0; font-size: 13px; opacity: 0.85; }
+
+  .kpis { background: var(--navy); color: #fff; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .kpi { display: grid; gap: 4px; padding: 28px 16px 28px 0; }
+  .kpi strong { font-size: 36px; font-weight: 800; color: var(--yellow); }
+  .kpi span { font-size: 14px; opacity: 0.9; }
+  @media (max-width: 860px) { .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .body { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 48px; padding-top: 56px; padding-bottom: 56px; }
+  @media (max-width: 860px) { .body { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+  .story { margin-top: 32px; font-size: 17px; line-height: 1.7; color: var(--text-2); }
+  .story :global(strong) { color: var(--navy); }
+
+  .side { align-self: start; background: #fff; border-radius: 20px; padding: 28px; box-shadow: 0 10px 30px rgba(20, 32, 92, 0.08); }
+  dl { margin: 0; display: grid; gap: 4px; }
+  dt { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-top: 12px; }
+  dd { margin: 0; font-weight: 600; color: var(--navy); }
+  dd ul { margin: 0; padding-left: 18px; font-weight: 500; }
+  .sdgs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .sdgs span { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: #E9EEF8; }
+  h2 { margin: 28px 0 8px; font-size: 16px; color: var(--navy); }
+  .links { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .links a { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 600; }
+  .badge { font: 600 11px var(--mono); color: #fff; padding: 3px 8px; border-radius: 6px; }
+  .badge.pdf { background: var(--navy); }
+  .badge.slides { background: var(--red); }
+
+  .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 96px; }
+  .pager a { display: grid; gap: 6px; padding: 24px; border-radius: 16px; background: #fff; text-decoration: none; font-weight: 700; box-shadow: 0 10px 30px rgba(20, 32, 92, 0.06); }
+  .pager .mono { font-size: 12px; font-weight: 500; color: var(--muted); }
+  .pager .right { text-align: right; }
+  @media (max-width: 600px) { .pager { grid-template-columns: minmax(0, 1fr); } .pager .right { text-align: left; } }
+</style>

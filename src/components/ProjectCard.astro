@@ -2,6 +2,7 @@
 // Title-over-image card (idea from sjgroup.com "Explore our Worldview").
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../lib/projects';
 
 const { project } = Astro.props as { project: CollectionEntry<'projects'> };
 const { title, award, issuer, cover, date } = project.data;
@@ -11,7 +12,7 @@ const { title, award, issuer, cover, date } = project.data;
   <div class="card-body">
     <span class="pill">{award}</span>
     <h3>{title}</h3>
-    <p class="mono">{issuer} · {date}</p>
+    <p class="mono">{issuer} · {formatDate(date)}</p>
   </div>
 </a>
 

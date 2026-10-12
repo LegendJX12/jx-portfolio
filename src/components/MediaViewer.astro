@@ -1,0 +1,137 @@
+---
+// Tabbed viewer: Video / Slides / PDF / Gallery.
+// Local files that don't exist yet show a friendly "coming soon" note instead of a broken frame.
+import fs from 'node:fs';
+
+type Item = { type: 'video' | 'slides' | 'pdf' | 'image'; title: string; src: string };
+const { media } = Astro.props as { media: Item[] };
+
+const isLocal = (src: string) => src.startsWith('/');
+const exists = (src: string) => !isLocal(src) || fs.existsSync(`public${src}`);
+
+// YouTube / Google Drive share links -> embeddable URLs.
+function embed(src: string) {
+  const yt = src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/);
+  if (yt) return `https://www.youtube-nocookie.com/embed/${yt[1]}`;
+  const drive = src.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+  if (drive) return `https://drive.google.com/file/d/${drive[1]}/preview`;
+  return src;
+}
+
+const tabs = [
+  { type: 'video', label: 'Video' },
+  { type: 'slides', label: 'Slides' },
+  { type: 'pdf', label: 'PDF' },
+  { type: 'image', label: 'Gallery' },
+]
+  .map((t) => ({ ...t, items: media.filter((m) => m.type === t.type) }))
+  .filter((t) => t.items.length);
+---
+{tabs.length > 0 && (
+  <div class="viewer" data-viewer>
+    <div class="tablist" role="tablist" aria-label="Project media">
+      {tabs.map((t, i) => (
+        <button type="button" role="tab" id={`tab-${t.type}`} aria-controls={`panel-${t.type}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+          {t.label} <span class="count">{t.items.length}</span>
+        </button>
+      ))}
+    </div>
+
+    {tabs.map((t, i) => (
+      <div class="panel" role="tabpanel" id={`panel-${t.type}`} aria-labelledby={`tab-${t.type}`} hidden={i !== 0}>
+        {t.type === 'image' ? (
+          <div class="gallery">
+            {t.items.map((m) =>
+              exists(m.src) ? (
+                <figure><img src={m.src} alt={m.title} loading="lazy" /><figcaption>{m.title}</figcaption></figure>
+              ) : (
+                <p class="soon">{m.title}: photo coming soon</p>
+              ),
+            )}
+          </div>
+        ) : (
+          t.items.map((m, j) => (
+            <article class="item" hidden={j !== 0} data-item>
+              <h3>{m.title}</h3>
+              {exists(m.src) ? (
+                <div class="frame">
+                  <p class="loading" aria-hidden="true">Loading…</p>
+                  <iframe src={embed(m.src)} title={m.title} loading="lazy" allow="fullscreen; picture-in-picture"></iframe>
+                </div>
+              ) : (
+                <p class="soon">This file is coming soon.</p>
+              )}
+              {exists(m.src) && <a class="open" href={m.src} target="_blank" rel="noopener">Open in a new tab ↗</a>}
+            </article>
+          ))
+        )}
+        {t.type !== 'image' && t.items.length > 1 && (
+          <div class="picker" aria-label={`Choose ${t.label.toLowerCase()}`}>
+            {t.items.map((m, j) => <button type="button" data-pick={j} aria-pressed={j === 0 ? 'true' : 'false'}>{m.title}</button>)}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-viewer]').forEach((viewer) => {
+    const tabs = [...viewer.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const select = (tab: HTMLButtonElement) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
+      });
+      tab.focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', (e) => {
+        const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (d) select(tabs[(i + d + tabs.length) % tabs.length]);
+      });
+    });
+    viewer.querySelectorAll<HTMLElement>('.panel').forEach((panel) => {
+      const items = panel.querySelectorAll<HTMLElement>('[data-item]');
+      const picks = panel.querySelectorAll<HTMLButtonElement>('[data-pick]');
+      picks.forEach((p) =>
+        p.addEventListener('click', () => {
+          items.forEach((it, j) => (it.hidden = String(j) !== p.dataset.pick));
+          picks.forEach((q) => q.setAttribute('aria-pressed', String(q === p)));
+        }),
+      );
+    });
+  });
+</script>
+
+<style>
+  .viewer { background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(20, 32, 92, 0.08); overflow: hidden; }
+  .tablist { display: flex; gap: 4px; padding: 8px; background: var(--navy); overflow-x: auto; }
+  [role='tab'] {
+    min-height: 44px; padding: 0 18px; border: 0; border-radius: 10px; cursor: pointer;
+    font: 600 15px var(--font); color: #fff; background: transparent; white-space: nowrap;
+  }
+  [role='tab']:hover { background: rgba(255, 255, 255, 0.12); }
+  [role='tab'][aria-selected='true'] { background: #fff; color: var(--navy); }
+  .count { font: 500 12px var(--mono); opacity: 0.7; }
+  .panel { padding: 24px; }
+  h3 { margin: 0 0 12px; font-size: 18px; color: var(--navy); }
+  .frame { position: relative; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #EEE9DD; }
+  .loading { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); font-family: var(--mono); font-size: 13px; }
+  iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .soon { margin: 0; padding: 32px; border-radius: 12px; background: #F7F3EA; color: var(--muted); text-align: center; }
+  .open { display: inline-flex; align-items: center; min-height: 44px; margin-top: 8px; font-weight: 600; }
+  .picker { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .picker button {
+    min-height: 44px; padding: 0 14px; border-radius: 10px; cursor: pointer;
+    font: 600 14px var(--font); color: var(--navy); background: #fff; border: 1px solid #D9D5CA;
+  }
+  .picker button[aria-pressed='true'] { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .gallery figure { margin: 0; }
+  .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+  .gallery figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+</style>
