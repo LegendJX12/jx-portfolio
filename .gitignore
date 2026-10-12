@@ -5,3 +5,6 @@ dist/
 .env.*
 .playwright-mcp/
 competition/
+
+.vercel
+.env*
