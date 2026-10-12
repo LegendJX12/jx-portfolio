@@ -5,7 +5,7 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Scene from '../../components/Scene.astro';
 import MediaViewer from '../../components/MediaViewer.astro';
-import { getProjects, categories, formatDate } from '../../lib/projects';
+import { getProjects, categories, formatDate, coverFor } from '../../lib/projects';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -24,7 +24,7 @@ const downloads = d.media.filter((m) => (m.type === 'pdf' || m.type === 'slides'
 <Base title={`${d.title} · JX`} description={d.summary}>
   <Nav />
 
-  <Scene image={d.cover} eager class="page-hero">
+  <Scene image={coverFor(project)} eager class="page-hero">
     <p class="eyebrow"><a href="/projects">Projects</a> / {categories[d.category]}</p>
     <span class="pill">{d.award}</span>
     <h1>{d.title}</h1>

@@ -1,4 +1,14 @@
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+
+// Drop a photo named after the project file into src/assets/projects/
+// (e.g. seasiders.jpg) and it replaces the scene picture automatically.
+const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/projects/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}', { eager: true });
+
+export function coverFor(project: CollectionEntry<'projects'>) {
+  const own = Object.entries(photos).find(([path]) => path.split('/').pop()!.replace(/\.\w+$/, '') === project.id);
+  return own ? own[1].default : project.data.cover;
+}
 
 export const categories = {
   coastal: 'Coastal & water',

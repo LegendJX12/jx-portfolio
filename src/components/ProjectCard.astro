@@ -2,10 +2,11 @@
 // Title-over-image card (idea from sjgroup.com "Explore our Worldview").
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '../lib/projects';
+import { formatDate, coverFor } from '../lib/projects';
 
 const { project } = Astro.props as { project: CollectionEntry<'projects'> };
-const { title, award, issuer, cover, date } = project.data;
+const { title, award, issuer, date } = project.data;
+const cover = coverFor(project);
 ---
 <a class="card" href={`/projects/${project.id}`}>
   {cover && <Image src={cover} alt="" widths={[480, 800]} sizes="(max-width: 860px) 85vw, 400px" format="webp" quality={70} class="card-img" />}
