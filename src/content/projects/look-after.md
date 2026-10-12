@@ -22,6 +22,15 @@ media:
   - type: pdf
     title: "Bronze certificate"
     src: /media/look-after/bronze-certificate.pdf
+  - type: image
+    title: "Bronze Award ceremony"
+    src: /media/look-after/photo-1.webp
+  - type: image
+    title: "Presenting at the Grand Final"
+    src: /media/look-after/photo-2.webp
+  - type: image
+    title: "Team G-OLD"
+    src: /media/look-after/photo-3.webp
 ---
 
 Team G-OLD designed "Look After", a WiFi-sensing smart-home caregiver system.

@@ -5,6 +5,7 @@ import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Scene from '../components/Scene.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { formatDate } from '../lib/projects';
 import kinabalu from '../assets/scenes/kinabalu.jpg';
 import redang from '../assets/scenes/redang-beach.jpg';
 import kl from '../assets/scenes/kl-skyline.jpg';
@@ -98,11 +99,11 @@ const places = [
     {moments.length === 0 ? (
       <p class="tile empty">Photos from competitions, Dean's List, the Munich exchange, CCAs and sport are coming soon.</p>
     ) : (
-      <div class="grid3">
+      <div class="moments">
         {moments.map((m) => (
           <figure class="moment">
             {m.data.photo && <Image src={m.data.photo} alt={m.data.title} widths={[400, 800]} sizes="(max-width: 860px) 100vw, 380px" format="webp" />}
-            <figcaption><strong>{m.data.title}</strong><span class="mono">{m.data.place ? `${m.data.place} · ` : ''}{m.data.date}</span></figcaption>
+            <figcaption><strong>{m.data.title}</strong><span class="mono">{m.data.place ? `${m.data.place} · ` : ''}{formatDate(m.data.date)}</span></figcaption>
           </figure>
         ))}
       </div>
@@ -152,8 +153,8 @@ const places = [
   .rail > :global(*) { scroll-snap-align: start; }
 
   .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  @media (max-width: 960px) { .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid3 { grid-template-columns: minmax(0, 1fr); } }
+  .moments { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  @media (max-width: 960px) { .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .grid4 { grid-template-columns: minmax(0, 1fr); } }
 
   .tile {

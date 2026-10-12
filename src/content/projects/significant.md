@@ -8,6 +8,9 @@ featured: false
 summary: "A real-time sign-language translator built with MediaPipe, Keras and the ChatGPT API."
 cover: ../../assets/scenes/kl-skyline.jpg
 media:
+  - type: slides
+    title: "Presentation slides"
+    src: /media/significant/slides.pdf
   - type: video
     title: "Prototype demo"
     src: https://drive.google.com/file/d/1SJMkDe4e6gTCi8hYPWrsxnZMPZ2NJUEb/view

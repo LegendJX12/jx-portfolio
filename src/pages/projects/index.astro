@@ -2,10 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Scene from '../../components/Scene.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
-import { getProjects, categories } from '../../lib/projects';
+import { getProjects, categories, formatDate } from '../../lib/projects';
 
 const projects = await getProjects();
+// Group newest year first: { '2025': [...], '2024': [...] }
+const years = Object.entries(Object.groupBy(projects, (p) => p.data.date.slice(0, 4))).sort(([a], [b]) => b.localeCompare(a));
 ---
 <Base title="Projects · Jin Xie Chai (JX)">
   <Nav />
@@ -23,11 +24,24 @@ const projects = await getProjects();
   </Scene>
 
   <section class="wrap list">
-    <div class="grid" id="project-grid">
-      {projects.map((p) => (
-        <div data-category={p.data.category}><ProjectCard project={p} /></div>
-      ))}
-    </div>
+    {years.map(([year, items]) => (
+      <div class="year" data-year>
+        <h2>{year}</h2>
+        <ul>
+          {items!.map((p) => (
+            <li data-category={p.data.category}>
+              <a href={`/projects/${p.id}`}>
+                <span class="theme mono">{categories[p.data.category]}</span>
+                <span class="award">{p.data.award}</span>
+                <span class="title">{p.data.title}</span>
+                <span class="date mono">{formatDate(p.data.date)}</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
     <p class="empty" id="empty" hidden>No projects in this theme yet.</p>
   </section>
 </Base>
@@ -45,6 +59,10 @@ const projects = await getProjects();
         const show = f === 'all' || el.dataset.category === f;
         el.hidden = !show;
         if (show) shown++;
+      });
+      // Hide a whole year when none of its projects match.
+      document.querySelectorAll<HTMLElement>('[data-year]').forEach((y) => {
+        y.hidden = !y.querySelector('li:not([hidden])');
       });
       empty.hidden = shown > 0;
     }),
@@ -64,8 +82,28 @@ const projects = await getProjects();
   .filters button:hover { background: rgba(255, 255, 255, 0.28); }
   .filters button[aria-pressed='true'] { background: var(--red); border-color: var(--red); }
   .list { padding-top: 48px; padding-bottom: 96px; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-  @media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 600px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+  .year { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-top: 1px solid #D9D5CA; }
+  .year h2 { margin: 0; font-size: 40px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; line-height: 1.1; }
+  .year ul { list-style: none; margin: 0; padding: 0; }
+  .year a {
+    display: grid; grid-template-columns: 130px 170px minmax(0, 1fr) 90px 24px; gap: 16px; align-items: center;
+    min-height: 64px; padding: 12px 16px; border-radius: 12px; text-decoration: none; color: var(--text);
+  }
+  .year a:hover { background: #fff; box-shadow: 0 6px 20px rgba(20, 32, 92, 0.08); }
+  .year li + li a { border-top: 1px solid #ECE7DC; }
+  .theme { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .award { justify-self: start; font-size: 12px; font-weight: 700; color: var(--navy); background: var(--yellow); padding: 4px 10px; border-radius: 999px; }
+  .title { font-size: 18px; font-weight: 700; color: var(--navy); }
+  .date { font-size: 12px; color: var(--muted); }
+  .arrow { color: var(--red); font-weight: 700; }
+  @media (max-width: 860px) {
+    .year { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .year a { grid-template-columns: minmax(0, 1fr) 24px; gap: 4px 12px; padding: 14px 8px; }
+    .theme, .award, .date { grid-column: 1; }
+    .title { grid-column: 1; grid-row: 2; }
+    .award { grid-row: 3; }
+    .arrow { grid-column: 2; grid-row: 1 / span 3; }
+    .date { display: none; }
+  }
   .empty { color: var(--muted); }
 </style>

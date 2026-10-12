@@ -26,6 +26,15 @@ media:
   - type: pdf
     title: "2nd Prize certificate"
     src: /media/port63-note-value/certificate.pdf
+  - type: image
+    title: "Pitching Note Value"
+    src: /media/port63-note-value/photo-1.webp
+  - type: image
+    title: "Team Idea Alchemists on stage"
+    src: /media/port63-note-value/photo-2.webp
+  - type: image
+    title: "Final pitch"
+    src: /media/port63-note-value/photo-3.webp
 ---
 
 Team Idea Alchemists built "Note Value", a tokenised notification protocol for decentralised apps on the Algorand blockchain.

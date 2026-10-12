@@ -12,11 +12,17 @@ links:
     url: https://www.pub.gov.sg/Public/KeyInitiatives/Coastal-Protection/Ideas-Competition
 media:
   - type: pdf
-    title: "Competition poster 1"
+    title: "Poster: Nature-Centred Coastline"
     src: /media/rising-seas/poster-1.pdf
   - type: pdf
-    title: "Competition poster 2"
+    title: "Poster: Recreational Seafront"
     src: /media/rising-seas/poster-2.pdf
+  - type: image
+    title: "Top 3 certificate: Nature-Centred Coastline"
+    src: /media/rising-seas/photo-1.webp
+  - type: image
+    title: "Top 3 certificate: Recreational Seafront"
+    src: /media/rising-seas/photo-2.webp
 ---
 
 Our ideas used Xbloc structures for "Long Island" and urban water buffers around Berlayer Creek and Labrador Park. The work was exhibited at the Marina Barrage Sustainable Singapore Gallery from 1 Nov to 31 Dec 2023.

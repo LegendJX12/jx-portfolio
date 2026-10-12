@@ -32,6 +32,18 @@ media:
   - type: pdf
     title: "Gold Award certificate"
     src: /media/seasiders/uaited-2024-gold-award.pdf
+  - type: image
+    title: "Team SEASIDERS at the Grand Final"
+    src: /media/seasiders/photo-1.webp
+  - type: image
+    title: "Presenting at the Grand Final"
+    src: /media/seasiders/photo-2.webp
+  - type: image
+    title: "Pitching to the judges"
+    src: /media/seasiders/photo-3.webp
+  - type: image
+    title: "With the Malaysian flag"
+    src: /media/seasiders/photo-4.webp
 ---
 
 Our team designed an **Osmotic Power Integrated Desalination** system. Forward osmosis (FO) pre-treats seawater, pressure-retarded osmosis (PRO) recovers energy from the salinity gradient, and reverse osmosis (RO) produces fresh water.
