@@ -6,7 +6,7 @@ date: "2023-09"
 category: digital
 featured: true
 summary: "A notification protocol for dApps on Algorand, about 30% cheaper and more secure."
-cover: ../../assets/scenes/kl-skyline.jpg
+cover: ../../assets/scenes/golden-gate-dusk.jpg
 kpis:
   - value: "30%"
     label: "cheaper than existing options"

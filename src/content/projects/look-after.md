@@ -6,7 +6,7 @@ date: "2023-08"
 category: health
 featured: true
 summary: "A smart-home system that uses WiFi sensing to look after elderly people living alone. Competed against 16 universities."
-cover: ../../assets/scenes/georgetown.jpg
+cover: ../../assets/scenes/everest-range.jpg
 links:
   - label: "UTAR news"
     url: https://news.utar.edu.my/awards/2023/Sept/12/01/01.html

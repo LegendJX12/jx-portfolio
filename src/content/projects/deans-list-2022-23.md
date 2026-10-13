@@ -6,7 +6,7 @@ date: "2023-09"
 category: academic
 featured: false
 summary: "Placed on the Dean's List for academic year 2022/23."
-cover: ../../assets/scenes/rainforest.jpg
+cover: ../../assets/scenes/skogafoss.jpg
 media:
   - type: pdf
     title: "Dean's List letter"

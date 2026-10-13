@@ -6,11 +6,12 @@ import Nav from '../components/Nav.astro';
 import Scene from '../components/Scene.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { formatDate } from '../lib/projects';
-import kinabalu from '../assets/scenes/kinabalu.jpg';
-import redang from '../assets/scenes/redang-beach.jpg';
-import kl from '../assets/scenes/kl-skyline.jpg';
-import georgetown from '../assets/scenes/georgetown.jpg';
-import rainforest from '../assets/scenes/rainforest.jpg';
+import patagonia from '../assets/scenes/patagonia.jpg';
+import goldenGate from '../assets/scenes/golden-gate.jpg';
+import threeGorges from '../assets/scenes/three-gorges.jpg';
+import himalayas from '../assets/scenes/himalayas.jpg';
+import icelandFalls from '../assets/scenes/iceland-falls.jpg';
+import millau from '../assets/scenes/millau-viaduct.jpg';
 
 const byNewest = (a: { data: { date: string } }, b: { data: { date: string } }) => b.data.date.localeCompare(a.data.date);
 const featured = (await getCollection('projects', (p) => p.data.featured)).sort(byNewest);
@@ -36,7 +37,7 @@ const places = [
   <Nav />
 
   <!-- HERO -->
-  <Scene image={kinabalu} eager class="hero">
+  <Scene image={patagonia} eager class="hero">
     <p class="eyebrow">Jin Xie Chai · JX · Singapore</p>
     <h1>Engineer by training, problem-solver by habit.</h1>
     <p class="lead">
@@ -49,7 +50,7 @@ const places = [
   </Scene>
 
   <!-- PROJECTS -->
-  <Scene image={redang} id="projects">
+  <Scene image={goldenGate} id="projects">
     <div class="head">
       <div>
         <p class="eyebrow">Explore my projects</p>
@@ -63,7 +64,7 @@ const places = [
   </Scene>
 
   <!-- WHAT I DO -->
-  <Scene image={kl} id="what-i-do">
+  <Scene image={threeGorges} id="what-i-do">
     <p class="eyebrow">What I do</p>
     <h2>From blast loads to sea levels</h2>
     <div class="grid4">
@@ -78,7 +79,7 @@ const places = [
   </Scene>
 
   <!-- PLACES -->
-  <Scene image={georgetown} id="places">
+  <Scene image={himalayas} id="places">
     <p class="eyebrow">Where I've been</p>
     <h2>Four places that shaped me</h2>
     <div class="grid4">
@@ -93,7 +94,7 @@ const places = [
   </Scene>
 
   <!-- MOMENTS -->
-  <Scene image={rainforest} id="moments">
+  <Scene image={icelandFalls} id="moments">
     <p class="eyebrow">Moments</p>
     <h2>Behind the projects</h2>
     {moments.length === 0 ? (
@@ -110,14 +111,14 @@ const places = [
     )}
   </Scene>
 
-  <!-- CONTACT (lion dance scene to come; deep red until then) -->
-  <Scene id="contact" fallback="var(--deep-red)">
+  <!-- CONTACT -->
+  <Scene image={millau} id="contact" fallback="var(--deep-red)">
     <p class="eyebrow">Contact</p>
     <h2>Let's build something that holds up.</h2>
     <div class="actions">
       <a class="btn" href="https://www.linkedin.com/in/jin-xie-chai-020112cjx/" rel="noopener">Connect on LinkedIn</a>
     </div>
-    <p class="mono small">© {new Date().getFullYear()} Jin Xie Chai</p>
+    <p class="mono small">© {new Date().getFullYear()} Jin Xie Chai · Background photos from <a href="https://unsplash.com" rel="noopener">Unsplash</a></p>
   </Scene>
 </Base>
 

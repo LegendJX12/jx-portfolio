@@ -6,7 +6,7 @@ date: "2025-08"
 category: health
 featured: false
 summary: "Business development for a Taiwanese surgical-training MedTech start-up entering Southeast Asia."
-cover: ../../assets/scenes/georgetown.jpg
+cover: ../../assets/scenes/everest-range.jpg
 media:
   - type: pdf
     title: "Certificate of Finalist"

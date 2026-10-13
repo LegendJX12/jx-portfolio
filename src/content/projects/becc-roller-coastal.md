@@ -6,7 +6,7 @@ date: "2024-07"
 category: coastal
 featured: true
 summary: "A layered coastal defence for Singapore's northwest coast, backed by life-cycle assessment."
-cover: ../../assets/scenes/redang-beach.jpg
+cover: ../../assets/scenes/golden-gate-coast.jpg
 media:
   - type: slides
     title: "BECC 2024 final round slides"

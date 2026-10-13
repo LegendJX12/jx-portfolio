@@ -6,7 +6,7 @@ date: "2023-08"
 category: digital
 featured: false
 summary: "A real-time sign-language translator built with MediaPipe, Keras and the ChatGPT API."
-cover: ../../assets/scenes/kl-skyline.jpg
+cover: ../../assets/scenes/golden-gate-dusk.jpg
 media:
   - type: slides
     title: "Presentation slides"

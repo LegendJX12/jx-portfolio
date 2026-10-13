@@ -1,23 +1,26 @@
 # Brand & design system
 
-> Updated 2026-10-12 with JX: realistic concept-art scenes, SJ Group-style structure,
-> no Windows-11 window frames, no CV download.
+> Updated 2026-10-13 with JX: real HD photos of engineering & nature wonders (no longer
+> Malaysia-only AI scenes), SJ Group-style structure, no window frames, no CV download.
 
 ## Concept
-"Malaysia in concept art": each section sits on a full-bleed, soft and calm digital
-concept-art scene of Malaysia. Content is shown as **title-over-image cards** (inspired by
-sjgroup.com "Explore our Worldview") with the vibe of the scenes, not plain white blocks.
+Each section sits on a full-bleed, real HD photo of a world engineering or nature wonder
+(Windows-wallpaper feel), under a dark shade for readable text. Content is shown as
+title-over-image cards (inspired by sjgroup.com). Photos come from Unsplash (free licence,
+no attribution required; we credit Unsplash in the footer). Do not use Windows Spotlight/Bing
+wallpapers: they are copyrighted.
 
-## Scenes per section (files in `public/scenes/`)
-- Home hero: `kinabalu.jpg` — Mt Kinabalu sunrise, hornbill
-- Explore my projects: `redang-beach.jpg` — Redang beach, turtle
-- What I do: `kl-skyline.jpg` — KL skyline at dusk
-- Where I've been: `georgetown.jpg` — George Town shophouses, lanterns
-- Moments: `rainforest.jpg` — rainforest, tapir, tiger
-- Contact footer: lion dance on festive red — TODO (Canva credits), deep-red placeholder
-- Projects page: Langkawi Sky Bridge — TODO, placeholder
-- Project detail page: Redang lagoon — TODO, placeholder
-Style for new scenes: soft, calm, cinematic, painterly yet realistic, muted colours, calm area for text.
+## Photos per section (files in `src/assets/scenes/`)
+- Home hero: `patagonia.jpg` — Cuernos del Paine, Torres del Paine
+- Explore my projects: `golden-gate.jpg` — Golden Gate Bridge at sunset
+- What I do: `three-gorges.jpg` — Three Gorges Dam
+- Where I've been: `himalayas.jpg` — Ama Dablam, Himalayas
+- Moments: `iceland-falls.jpg` — Seljalandsfoss
+- Contact: `millau-viaduct.jpg` — Millau Viaduct
+- Projects page: `panama-canal.jpg` — Panama Canal locks
+- Fallback project covers: `golden-gate-coast.jpg` (coastal), `millau-viaduct.jpg` (bridges),
+  `three-gorges.jpg` (BECC), `everest-range.jpg` (health), `golden-gate-dusk.jpg` (digital),
+  `skogafoss.jpg` (academic)
 
 ## Colours (Jalur Gemilang)
 - Navy (text, headings): #14205C

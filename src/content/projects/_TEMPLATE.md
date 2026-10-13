@@ -13,7 +13,7 @@ date: "2026-01"                        # year-month
 category: coastal                      # coastal | health | digital | structures | academic
 featured: false                        # true = shows on the Home page
 summary: "One or two sentences that appear on the project card."
-cover: ../../assets/scenes/redang-beach.jpg   # a photo in src/assets/ (optional)
+cover: ../../assets/scenes/golden-gate-coast.jpg   # a photo in src/assets/ (optional)
 
 team:                                  # optional
   - "Your teammate"

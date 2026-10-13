@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../../components/Nav.astro';
 import Scene from '../../components/Scene.astro';
 import { getProjects, categories, formatDate } from '../../lib/projects';
+import panama from '../../assets/scenes/panama-canal.jpg';
 
 const projects = await getProjects();
 // Group newest year first: { '2025': [...], '2024': [...] }
@@ -11,8 +12,7 @@ const years = Object.entries(Object.groupBy(projects, (p) => p.data.date.slice(0
 <Base title="Projects · Jin Xie Chai (JX)">
   <Nav />
 
-  <!-- Langkawi Sky Bridge scene to come; sunset colours until then -->
-  <Scene fallback="linear-gradient(180deg, #3A2F7A 0%, #C35A86 55%, #F7955A 100%)" class="page-hero">
+  <Scene image={panama} fallback="linear-gradient(180deg, #3A2F7A 0%, #C35A86 55%, #F7955A 100%)" class="page-hero">
     <p class="eyebrow">All projects · {projects.length}</p>
     <h1>Projects &amp; achievements</h1>
     <div class="filters" role="group" aria-label="Filter by theme">

@@ -6,7 +6,7 @@ date: "2023-11"
 category: health
 featured: true
 summary: "A WiFi-sensing wearable that lets doctors monitor Parkinson's patients remotely."
-cover: ../../assets/scenes/georgetown.jpg
+cover: ../../assets/scenes/everest-range.jpg
 sdgs: [3, 12]
 media:
   - type: pdf

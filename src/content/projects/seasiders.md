@@ -6,7 +6,7 @@ date: "2024-08"
 category: coastal
 featured: true
 summary: "Desalination that powers itself: forward osmosis, pressure-retarded osmosis and reverse osmosis combined to halve energy use and produce zero brine."
-cover: ../../assets/scenes/redang-beach.jpg
+cover: ../../assets/scenes/golden-gate-coast.jpg
 team:
   - "Lam Nguyen Ngan Ha"
   - "Natalie Tanjaya"

@@ -6,7 +6,7 @@ date: "2024-07"
 category: academic
 featured: false
 summary: "Entrepreneurship programme by HP: starting a small business, finding your target audience, basics of finance and finding funding."
-cover: ../../assets/scenes/rainforest.jpg
+cover: ../../assets/scenes/skogafoss.jpg
 media:
   - type: pdf
     title: "Starting a Small Business"
