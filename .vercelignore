@@ -4,3 +4,4 @@ dist/
 .astro/
 .playwright-mcp/
 .env*
+media-inbox/

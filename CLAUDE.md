@@ -39,3 +39,18 @@ Read this at the start of every session.
 ## Design reference
 - `design-reference/*.dc.html` are the approved mockups (Home, Achievements, Project detail).
   Rebuild them faithfully as real Astro pages/components.
+
+## Media inbox (JX drops files here)
+- JX puts new photos, videos, PDFs, slides and certificates into `media-inbox/`
+  (sorted into its subfolders; ignored by git/Vercel). When JX says "add the new files", for each file:
+  1. Work out which project/section it belongs to (ask JX if unclear).
+  2. Images: convert to WebP, max ~1600px wide. Gallery photos → `public/media/<project-slug>/`;
+     a project cover → `src/assets/projects/<project-slug>.jpg`; a moment → `src/assets/moments/` + a `.md` in `src/content/moments/`.
+  3. PDFs / certificates: move to `public/media/<project-slug>/` (rename to kebab-case). Max 10 MB.
+  4. Slides (.pptx): export to PDF (PowerPoint is installed) for the viewer; keep the .pptx as a download only if ≤ 10 MB.
+  5. Videos: do NOT put large videos in the site. Ask JX for a YouTube (Unlisted) / Drive link;
+     clips under 10 MB may go in as .mp4 (compressed).
+  6. `wallpapers/`: JX's own landscape / engineering-wonder photos to replace a section background
+     in `src/assets/scenes/` (see `docs/brand.md`).
+  7. Update the matching Markdown content file, build, show JX, then empty the processed files from the inbox.
+  8. Commit and `git push` — Vercel publishes automatically (https://chai-jin-xie-portfolio.vercel.app).

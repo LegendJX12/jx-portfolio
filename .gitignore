@@ -8,3 +8,5 @@ competition/
 
 .vercel
 .env*
+media-inbox/*
+!media-inbox/README.md
